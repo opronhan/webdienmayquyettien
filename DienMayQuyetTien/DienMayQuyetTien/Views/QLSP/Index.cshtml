@@ -1,0 +1,50 @@
+﻿@model IEnumerable<DienMayQuyetTien.Models.BangSanPham>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Bảng sản phảm</h2>
+
+<p>
+    @Html.ActionLink("Tạo mới", "Create")
+</p>
+<hr />
+
+<table class="table table-striped" style="width:100%">
+    <thead>
+        <tr>
+            <th>Mã sản phẩm</th>
+            <th>Tên sản phẩm</th>
+            <th>Gía bán</th>
+            <th>Gía gốc</th>
+            <th>Số lượng tồn</th>
+            <th>Tên loại</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@Html.DisplayFor(model => item.MaSP)</td>
+                <td>@Html.DisplayFor(model => item.TenSP)</td>
+                <td>@Html.DisplayFor(model => item.GiaBan)</td>
+                <td>@Html.DisplayFor(model => item.GiaGoc)</td>
+                <td>@Html.DisplayFor(model => item.SoLuongTon)</td>
+                <td>@Html.DisplayFor(model => item.LoaiSanPham.TenLoai)</td>
+                <td>
+                    @Html.ActionLink("Sửa", "Edit", new { id = item.id }) |
+                    @Html.ActionLink("Thêm chi tiết", "Details", new { id = item.id }) |
+                    @Html.ActionLink("Xóa", "Delete", new { id = item.id })
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+   
+       
+ 
+
+
+

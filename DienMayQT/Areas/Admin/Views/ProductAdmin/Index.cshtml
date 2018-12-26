@@ -1,0 +1,93 @@
+﻿    @model IEnumerable<DienMayQT.Models.Product>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2 class="title">Quản lý sản phẩm</h2>
+
+<p style="text-align:right;">
+    <button class="create-btn" onclick="location.href='@Url.Action("Create", "ProductAdmin")'"><i class="fa fa-plus-circle" aria-hidden="true"></i>  Create</button>
+</p>
+
+<div class="card mb-3">
+    <div class="card-header">
+        <i class="fa fa-table"></i> Danh sách sản phẩm
+    </div>
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th>Product Code</th>
+                        <th>Product Name</th>
+                        <th>Sale Price</th>
+                        <th>Origin Price</th>
+                        <th>Installment Price</th>
+                        <th>Quantity</th>
+                        <th>Avatar</th>
+                        <th>Status</th>
+                        <th>Product Type</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tfoot>
+                    <tr>
+                        <th>Product Code</th>
+                        <th>Product Name</th>
+                        <th>Sale Price</th>
+                        <th>Origin Price</th>
+                        <th>Installment Price</th>
+                        <th>Quantity</th>
+                        <th>Avatar</th>
+                        <th>Status</th>
+                        <th>Product Type</th>
+                        <th>Action</th>
+                    </tr>
+                </tfoot>
+                <tbody>
+                    @foreach (var item in Model)
+{
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.ProductCode)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ProductName)
+        </td>
+        <td>
+           @String.Format("{0:0,0}",item.SalePrice) VNĐ
+        </td>
+        <td>
+            @String.Format("{0:0,0}", item.OriginPrice) VNĐ
+      
+        </td>
+        <td>
+            @String.Format("{0:0,0}", item.InstallmentPrice) VNĐ
+        </td>
+        <td>
+             @Html.DisplayFor(modelItem => item.Quantity)
+        </td>
+        <td>
+            <img src="/images/@Url.Content(item.Avatar)" width="150px" height="150px"/>
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Status)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ProductType.ProductTypeName)
+        </td>
+        <td>
+            <button type="button" class="btn btn-success" onclick="location.href='@Url.Action("Edit", new { id = item.ID })'"><i class="fa fa-pencil" aria-hidden="true"></i></button>
+            <button type="button" class="btn btn-danger" onclick="location.href='@Url.Action("Delete", new { id = item.ID })'"><i class="fa fa-trash" aria-hidden="true"></i></button>
+        </td>
+    </tr>
+}
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
+</div>

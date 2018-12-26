@@ -1,0 +1,275 @@
+D:\manage\DienMayQT\DienMayQT\bin\DienMayQT.dll.config
+D:\manage\DienMayQT\DienMayQT\bin\DienMayQT.dll
+D:\manage\DienMayQT\DienMayQT\bin\DienMayQT.pdb
+D:\manage\DienMayQT\DienMayQT\bin\Antlr3.Runtime.dll
+D:\manage\DienMayQT\DienMayQT\bin\EntityFramework.dll
+D:\manage\DienMayQT\DienMayQT\bin\EntityFramework.SqlServer.dll
+D:\manage\DienMayQT\DienMayQT\bin\Microsoft.AspNet.Identity.Core.dll
+D:\manage\DienMayQT\DienMayQT\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\manage\DienMayQT\DienMayQT\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\manage\DienMayQT\DienMayQT\bin\Microsoft.Owin.dll
+D:\manage\DienMayQT\DienMayQT\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\manage\DienMayQT\DienMayQT\bin\Microsoft.Owin.Security.Cookies.dll
+D:\manage\DienMayQT\DienMayQT\bin\Microsoft.Owin.Security.dll
+D:\manage\DienMayQT\DienMayQT\bin\Microsoft.Owin.Security.Facebook.dll
+D:\manage\DienMayQT\DienMayQT\bin\Microsoft.Owin.Security.Google.dll
+D:\manage\DienMayQT\DienMayQT\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\manage\DienMayQT\DienMayQT\bin\Microsoft.Owin.Security.OAuth.dll
+D:\manage\DienMayQT\DienMayQT\bin\Microsoft.Owin.Security.Twitter.dll
+D:\manage\DienMayQT\DienMayQT\bin\Microsoft.Web.Infrastructure.dll
+D:\manage\DienMayQT\DienMayQT\bin\Newtonsoft.Json.dll
+D:\manage\DienMayQT\DienMayQT\bin\Owin.dll
+D:\manage\DienMayQT\DienMayQT\bin\System.Web.Helpers.dll
+D:\manage\DienMayQT\DienMayQT\bin\System.Web.Mvc.dll
+D:\manage\DienMayQT\DienMayQT\bin\System.Web.Optimization.dll
+D:\manage\DienMayQT\DienMayQT\bin\System.Web.Razor.dll
+D:\manage\DienMayQT\DienMayQT\bin\System.Web.WebPages.Deployment.dll
+D:\manage\DienMayQT\DienMayQT\bin\System.Web.WebPages.dll
+D:\manage\DienMayQT\DienMayQT\bin\System.Web.WebPages.Razor.dll
+D:\manage\DienMayQT\DienMayQT\bin\WebGrease.dll
+D:\manage\DienMayQT\DienMayQT\bin\System.Web.Helpers.xml
+D:\manage\DienMayQT\DienMayQT\bin\System.Web.Mvc.xml
+D:\manage\DienMayQT\DienMayQT\bin\System.Web.Optimization.xml
+D:\manage\DienMayQT\DienMayQT\bin\System.Web.Razor.xml
+D:\manage\DienMayQT\DienMayQT\bin\System.Web.WebPages.xml
+D:\manage\DienMayQT\DienMayQT\bin\System.Web.WebPages.Deployment.xml
+D:\manage\DienMayQT\DienMayQT\bin\System.Web.WebPages.Razor.xml
+D:\manage\DienMayQT\DienMayQT\bin\Newtonsoft.Json.xml
+D:\manage\DienMayQT\DienMayQT\bin\Antlr3.Runtime.pdb
+D:\manage\DienMayQT\DienMayQT\bin\EntityFramework.xml
+D:\manage\DienMayQT\DienMayQT\bin\EntityFramework.SqlServer.xml
+D:\manage\DienMayQT\DienMayQT\bin\Microsoft.AspNet.Identity.Core.xml
+D:\manage\DienMayQT\DienMayQT\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\manage\DienMayQT\DienMayQT\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\manage\DienMayQT\DienMayQT\bin\Microsoft.Owin.xml
+D:\manage\DienMayQT\DienMayQT\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\manage\DienMayQT\DienMayQT\bin\Microsoft.Owin.Security.xml
+D:\manage\DienMayQT\DienMayQT\bin\Microsoft.Owin.Security.Facebook.xml
+D:\manage\DienMayQT\DienMayQT\bin\Microsoft.Owin.Security.Cookies.xml
+D:\manage\DienMayQT\DienMayQT\bin\Microsoft.Owin.Security.OAuth.xml
+D:\manage\DienMayQT\DienMayQT\bin\Microsoft.Owin.Security.Google.xml
+D:\manage\DienMayQT\DienMayQT\bin\Microsoft.Owin.Security.Twitter.xml
+D:\manage\DienMayQT\DienMayQT\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\manage\DienMayQT\DienMayQT\obj\Debug\DienMayQT.csprojResolveAssemblyReference.cache
+D:\manage\DienMayQT\DienMayQT\obj\Debug\DienMayQT.dll
+D:\manage\DienMayQT\DienMayQT\obj\Debug\DienMayQT.pdb
+D:\K22T2-Team9-Project-Phase1\K22T2-Team9-Project-Phase1\back end\DienMayQT\DienMayQT\bin\DienMayQT.dll.config
+D:\K22T2-Team9-Project-Phase1\K22T2-Team9-Project-Phase1\back end\DienMayQT\DienMayQT\bin\DienMayQT.dll
+D:\K22T2-Team9-Project-Phase1\K22T2-Team9-Project-Phase1\back end\DienMayQT\DienMayQT\bin\DienMayQT.pdb
+D:\K22T2-Team9-Project-Phase1\K22T2-Team9-Project-Phase1\back end\DienMayQT\DienMayQT\bin\Antlr3.Runtime.dll
+D:\K22T2-Team9-Project-Phase1\K22T2-Team9-Project-Phase1\back end\DienMayQT\DienMayQT\bin\EntityFramework.dll
+D:\K22T2-Team9-Project-Phase1\K22T2-Team9-Project-Phase1\back end\DienMayQT\DienMayQT\bin\EntityFramework.SqlServer.dll
+D:\K22T2-Team9-Project-Phase1\K22T2-Team9-Project-Phase1\back end\DienMayQT\DienMayQT\bin\Microsoft.AspNet.Identity.Core.dll
+D:\K22T2-Team9-Project-Phase1\K22T2-Team9-Project-Phase1\back end\DienMayQT\DienMayQT\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\K22T2-Team9-Project-Phase1\K22T2-Team9-Project-Phase1\back end\DienMayQT\DienMayQT\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\K22T2-Team9-Project-Phase1\K22T2-Team9-Project-Phase1\back end\DienMayQT\DienMayQT\bin\Microsoft.Owin.dll
+D:\K22T2-Team9-Project-Phase1\K22T2-Team9-Project-Phase1\back end\DienMayQT\DienMayQT\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\K22T2-Team9-Project-Phase1\K22T2-Team9-Project-Phase1\back end\DienMayQT\DienMayQT\bin\Microsoft.Owin.Security.Cookies.dll
+D:\K22T2-Team9-Project-Phase1\K22T2-Team9-Project-Phase1\back end\DienMayQT\DienMayQT\bin\Microsoft.Owin.Security.dll
+D:\K22T2-Team9-Project-Phase1\K22T2-Team9-Project-Phase1\back end\DienMayQT\DienMayQT\bin\Microsoft.Owin.Security.Facebook.dll
+D:\K22T2-Team9-Project-Phase1\K22T2-Team9-Project-Phase1\back end\DienMayQT\DienMayQT\bin\Microsoft.Owin.Security.Google.dll
+D:\K22T2-Team9-Project-Phase1\K22T2-Team9-Project-Phase1\back end\DienMayQT\DienMayQT\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\K22T2-Team9-Project-Phase1\K22T2-Team9-Project-Phase1\back end\DienMayQT\DienMayQT\bin\Microsoft.Owin.Security.OAuth.dll
+D:\K22T2-Team9-Project-Phase1\K22T2-Team9-Project-Phase1\back end\DienMayQT\DienMayQT\bin\Microsoft.Owin.Security.Twitter.dll
+D:\K22T2-Team9-Project-Phase1\K22T2-Team9-Project-Phase1\back end\DienMayQT\DienMayQT\bin\Microsoft.Web.Infrastructure.dll
+D:\K22T2-Team9-Project-Phase1\K22T2-Team9-Project-Phase1\back end\DienMayQT\DienMayQT\bin\Newtonsoft.Json.dll
+D:\K22T2-Team9-Project-Phase1\K22T2-Team9-Project-Phase1\back end\DienMayQT\DienMayQT\bin\Owin.dll
+D:\K22T2-Team9-Project-Phase1\K22T2-Team9-Project-Phase1\back end\DienMayQT\DienMayQT\bin\System.Web.Helpers.dll
+D:\K22T2-Team9-Project-Phase1\K22T2-Team9-Project-Phase1\back end\DienMayQT\DienMayQT\bin\System.Web.Mvc.dll
+D:\K22T2-Team9-Project-Phase1\K22T2-Team9-Project-Phase1\back end\DienMayQT\DienMayQT\bin\System.Web.Optimization.dll
+D:\K22T2-Team9-Project-Phase1\K22T2-Team9-Project-Phase1\back end\DienMayQT\DienMayQT\bin\System.Web.Razor.dll
+D:\K22T2-Team9-Project-Phase1\K22T2-Team9-Project-Phase1\back end\DienMayQT\DienMayQT\bin\System.Web.WebPages.Deployment.dll
+D:\K22T2-Team9-Project-Phase1\K22T2-Team9-Project-Phase1\back end\DienMayQT\DienMayQT\bin\System.Web.WebPages.dll
+D:\K22T2-Team9-Project-Phase1\K22T2-Team9-Project-Phase1\back end\DienMayQT\DienMayQT\bin\System.Web.WebPages.Razor.dll
+D:\K22T2-Team9-Project-Phase1\K22T2-Team9-Project-Phase1\back end\DienMayQT\DienMayQT\bin\WebGrease.dll
+D:\K22T2-Team9-Project-Phase1\K22T2-Team9-Project-Phase1\back end\DienMayQT\DienMayQT\bin\System.Web.Helpers.xml
+D:\K22T2-Team9-Project-Phase1\K22T2-Team9-Project-Phase1\back end\DienMayQT\DienMayQT\bin\System.Web.Mvc.xml
+D:\K22T2-Team9-Project-Phase1\K22T2-Team9-Project-Phase1\back end\DienMayQT\DienMayQT\bin\System.Web.Optimization.xml
+D:\K22T2-Team9-Project-Phase1\K22T2-Team9-Project-Phase1\back end\DienMayQT\DienMayQT\bin\System.Web.Razor.xml
+D:\K22T2-Team9-Project-Phase1\K22T2-Team9-Project-Phase1\back end\DienMayQT\DienMayQT\bin\System.Web.WebPages.xml
+D:\K22T2-Team9-Project-Phase1\K22T2-Team9-Project-Phase1\back end\DienMayQT\DienMayQT\bin\System.Web.WebPages.Deployment.xml
+D:\K22T2-Team9-Project-Phase1\K22T2-Team9-Project-Phase1\back end\DienMayQT\DienMayQT\bin\System.Web.WebPages.Razor.xml
+D:\K22T2-Team9-Project-Phase1\K22T2-Team9-Project-Phase1\back end\DienMayQT\DienMayQT\bin\Newtonsoft.Json.xml
+D:\K22T2-Team9-Project-Phase1\K22T2-Team9-Project-Phase1\back end\DienMayQT\DienMayQT\bin\Antlr3.Runtime.pdb
+D:\K22T2-Team9-Project-Phase1\K22T2-Team9-Project-Phase1\back end\DienMayQT\DienMayQT\bin\EntityFramework.xml
+D:\K22T2-Team9-Project-Phase1\K22T2-Team9-Project-Phase1\back end\DienMayQT\DienMayQT\bin\EntityFramework.SqlServer.xml
+D:\K22T2-Team9-Project-Phase1\K22T2-Team9-Project-Phase1\back end\DienMayQT\DienMayQT\bin\Microsoft.AspNet.Identity.Core.xml
+D:\K22T2-Team9-Project-Phase1\K22T2-Team9-Project-Phase1\back end\DienMayQT\DienMayQT\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\K22T2-Team9-Project-Phase1\K22T2-Team9-Project-Phase1\back end\DienMayQT\DienMayQT\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\K22T2-Team9-Project-Phase1\K22T2-Team9-Project-Phase1\back end\DienMayQT\DienMayQT\bin\Microsoft.Owin.xml
+D:\K22T2-Team9-Project-Phase1\K22T2-Team9-Project-Phase1\back end\DienMayQT\DienMayQT\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\K22T2-Team9-Project-Phase1\K22T2-Team9-Project-Phase1\back end\DienMayQT\DienMayQT\bin\Microsoft.Owin.Security.xml
+D:\K22T2-Team9-Project-Phase1\K22T2-Team9-Project-Phase1\back end\DienMayQT\DienMayQT\bin\Microsoft.Owin.Security.Facebook.xml
+D:\K22T2-Team9-Project-Phase1\K22T2-Team9-Project-Phase1\back end\DienMayQT\DienMayQT\bin\Microsoft.Owin.Security.Cookies.xml
+D:\K22T2-Team9-Project-Phase1\K22T2-Team9-Project-Phase1\back end\DienMayQT\DienMayQT\bin\Microsoft.Owin.Security.OAuth.xml
+D:\K22T2-Team9-Project-Phase1\K22T2-Team9-Project-Phase1\back end\DienMayQT\DienMayQT\bin\Microsoft.Owin.Security.Google.xml
+D:\K22T2-Team9-Project-Phase1\K22T2-Team9-Project-Phase1\back end\DienMayQT\DienMayQT\bin\Microsoft.Owin.Security.Twitter.xml
+D:\K22T2-Team9-Project-Phase1\K22T2-Team9-Project-Phase1\back end\DienMayQT\DienMayQT\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\K22T2-Team9-Project-Phase1\K22T2-Team9-Project-Phase1\back end\DienMayQT\DienMayQT\obj\Debug\DienMayQT.csprojResolveAssemblyReference.cache
+D:\K22T2-Team9-Project-Phase1\K22T2-Team9-Project-Phase1\back end\DienMayQT\DienMayQT\obj\Debug\DienMayQT.dll
+D:\K22T2-Team9-Project-Phase1\K22T2-Team9-Project-Phase1\back end\DienMayQT\DienMayQT\obj\Debug\DienMayQT.pdb
+D:\DienMayQT\DienMayQT\DienMayQT\bin\DienMayQT.dll.config
+D:\DienMayQT\DienMayQT\DienMayQT\bin\DienMayQT.dll
+D:\DienMayQT\DienMayQT\DienMayQT\bin\DienMayQT.pdb
+D:\DienMayQT\DienMayQT\DienMayQT\bin\Antlr3.Runtime.dll
+D:\DienMayQT\DienMayQT\DienMayQT\bin\EntityFramework.dll
+D:\DienMayQT\DienMayQT\DienMayQT\bin\EntityFramework.SqlServer.dll
+D:\DienMayQT\DienMayQT\DienMayQT\bin\Microsoft.AspNet.Identity.Core.dll
+D:\DienMayQT\DienMayQT\DienMayQT\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\DienMayQT\DienMayQT\DienMayQT\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\DienMayQT\DienMayQT\DienMayQT\bin\Microsoft.Owin.dll
+D:\DienMayQT\DienMayQT\DienMayQT\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\DienMayQT\DienMayQT\DienMayQT\bin\Microsoft.Owin.Security.Cookies.dll
+D:\DienMayQT\DienMayQT\DienMayQT\bin\Microsoft.Owin.Security.dll
+D:\DienMayQT\DienMayQT\DienMayQT\bin\Microsoft.Owin.Security.Facebook.dll
+D:\DienMayQT\DienMayQT\DienMayQT\bin\Microsoft.Owin.Security.Google.dll
+D:\DienMayQT\DienMayQT\DienMayQT\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\DienMayQT\DienMayQT\DienMayQT\bin\Microsoft.Owin.Security.OAuth.dll
+D:\DienMayQT\DienMayQT\DienMayQT\bin\Microsoft.Owin.Security.Twitter.dll
+D:\DienMayQT\DienMayQT\DienMayQT\bin\Microsoft.Web.Infrastructure.dll
+D:\DienMayQT\DienMayQT\DienMayQT\bin\Newtonsoft.Json.dll
+D:\DienMayQT\DienMayQT\DienMayQT\bin\Owin.dll
+D:\DienMayQT\DienMayQT\DienMayQT\bin\System.Web.Helpers.dll
+D:\DienMayQT\DienMayQT\DienMayQT\bin\System.Web.Mvc.dll
+D:\DienMayQT\DienMayQT\DienMayQT\bin\System.Web.Optimization.dll
+D:\DienMayQT\DienMayQT\DienMayQT\bin\System.Web.Razor.dll
+D:\DienMayQT\DienMayQT\DienMayQT\bin\System.Web.WebPages.Deployment.dll
+D:\DienMayQT\DienMayQT\DienMayQT\bin\System.Web.WebPages.dll
+D:\DienMayQT\DienMayQT\DienMayQT\bin\System.Web.WebPages.Razor.dll
+D:\DienMayQT\DienMayQT\DienMayQT\bin\WebGrease.dll
+D:\DienMayQT\DienMayQT\DienMayQT\bin\System.Web.Helpers.xml
+D:\DienMayQT\DienMayQT\DienMayQT\bin\System.Web.Mvc.xml
+D:\DienMayQT\DienMayQT\DienMayQT\bin\System.Web.Optimization.xml
+D:\DienMayQT\DienMayQT\DienMayQT\bin\System.Web.Razor.xml
+D:\DienMayQT\DienMayQT\DienMayQT\bin\System.Web.WebPages.xml
+D:\DienMayQT\DienMayQT\DienMayQT\bin\System.Web.WebPages.Deployment.xml
+D:\DienMayQT\DienMayQT\DienMayQT\bin\System.Web.WebPages.Razor.xml
+D:\DienMayQT\DienMayQT\DienMayQT\bin\Newtonsoft.Json.xml
+D:\DienMayQT\DienMayQT\DienMayQT\bin\Antlr3.Runtime.pdb
+D:\DienMayQT\DienMayQT\DienMayQT\bin\EntityFramework.xml
+D:\DienMayQT\DienMayQT\DienMayQT\bin\EntityFramework.SqlServer.xml
+D:\DienMayQT\DienMayQT\DienMayQT\bin\Microsoft.AspNet.Identity.Core.xml
+D:\DienMayQT\DienMayQT\DienMayQT\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\DienMayQT\DienMayQT\DienMayQT\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\DienMayQT\DienMayQT\DienMayQT\bin\Microsoft.Owin.xml
+D:\DienMayQT\DienMayQT\DienMayQT\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\DienMayQT\DienMayQT\DienMayQT\bin\Microsoft.Owin.Security.xml
+D:\DienMayQT\DienMayQT\DienMayQT\bin\Microsoft.Owin.Security.Facebook.xml
+D:\DienMayQT\DienMayQT\DienMayQT\bin\Microsoft.Owin.Security.Cookies.xml
+D:\DienMayQT\DienMayQT\DienMayQT\bin\Microsoft.Owin.Security.OAuth.xml
+D:\DienMayQT\DienMayQT\DienMayQT\bin\Microsoft.Owin.Security.Google.xml
+D:\DienMayQT\DienMayQT\DienMayQT\bin\Microsoft.Owin.Security.Twitter.xml
+D:\DienMayQT\DienMayQT\DienMayQT\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\DienMayQT\DienMayQT\DienMayQT\obj\Debug\DienMayQT.dll
+D:\DienMayQT\DienMayQT\DienMayQT\obj\Debug\DienMayQT.pdb
+D:\DienMayQT\DienMayQT\DienMayQT\obj\Debug\DienMayQT.csprojResolveAssemblyReference.cache
+C:\Users\tranp\Desktop\DienMayQT\DienMayQT\DienMayQT\bin\DienMayQT.dll.config
+C:\Users\tranp\Desktop\DienMayQT\DienMayQT\DienMayQT\bin\DienMayQT.dll
+C:\Users\tranp\Desktop\DienMayQT\DienMayQT\DienMayQT\bin\DienMayQT.pdb
+C:\Users\tranp\Desktop\DienMayQT\DienMayQT\DienMayQT\bin\Antlr3.Runtime.dll
+C:\Users\tranp\Desktop\DienMayQT\DienMayQT\DienMayQT\bin\EntityFramework.dll
+C:\Users\tranp\Desktop\DienMayQT\DienMayQT\DienMayQT\bin\EntityFramework.SqlServer.dll
+C:\Users\tranp\Desktop\DienMayQT\DienMayQT\DienMayQT\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\tranp\Desktop\DienMayQT\DienMayQT\DienMayQT\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\tranp\Desktop\DienMayQT\DienMayQT\DienMayQT\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\tranp\Desktop\DienMayQT\DienMayQT\DienMayQT\bin\Microsoft.Owin.dll
+C:\Users\tranp\Desktop\DienMayQT\DienMayQT\DienMayQT\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\tranp\Desktop\DienMayQT\DienMayQT\DienMayQT\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\tranp\Desktop\DienMayQT\DienMayQT\DienMayQT\bin\Microsoft.Owin.Security.dll
+C:\Users\tranp\Desktop\DienMayQT\DienMayQT\DienMayQT\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\tranp\Desktop\DienMayQT\DienMayQT\DienMayQT\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\tranp\Desktop\DienMayQT\DienMayQT\DienMayQT\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\tranp\Desktop\DienMayQT\DienMayQT\DienMayQT\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\tranp\Desktop\DienMayQT\DienMayQT\DienMayQT\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\tranp\Desktop\DienMayQT\DienMayQT\DienMayQT\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\tranp\Desktop\DienMayQT\DienMayQT\DienMayQT\bin\Newtonsoft.Json.dll
+C:\Users\tranp\Desktop\DienMayQT\DienMayQT\DienMayQT\bin\Owin.dll
+C:\Users\tranp\Desktop\DienMayQT\DienMayQT\DienMayQT\bin\System.Web.Helpers.dll
+C:\Users\tranp\Desktop\DienMayQT\DienMayQT\DienMayQT\bin\System.Web.Mvc.dll
+C:\Users\tranp\Desktop\DienMayQT\DienMayQT\DienMayQT\bin\System.Web.Optimization.dll
+C:\Users\tranp\Desktop\DienMayQT\DienMayQT\DienMayQT\bin\System.Web.Razor.dll
+C:\Users\tranp\Desktop\DienMayQT\DienMayQT\DienMayQT\bin\System.Web.WebPages.Deployment.dll
+C:\Users\tranp\Desktop\DienMayQT\DienMayQT\DienMayQT\bin\System.Web.WebPages.dll
+C:\Users\tranp\Desktop\DienMayQT\DienMayQT\DienMayQT\bin\System.Web.WebPages.Razor.dll
+C:\Users\tranp\Desktop\DienMayQT\DienMayQT\DienMayQT\bin\WebGrease.dll
+C:\Users\tranp\Desktop\DienMayQT\DienMayQT\DienMayQT\bin\System.Web.Helpers.xml
+C:\Users\tranp\Desktop\DienMayQT\DienMayQT\DienMayQT\bin\System.Web.Mvc.xml
+C:\Users\tranp\Desktop\DienMayQT\DienMayQT\DienMayQT\bin\System.Web.Optimization.xml
+C:\Users\tranp\Desktop\DienMayQT\DienMayQT\DienMayQT\bin\System.Web.Razor.xml
+C:\Users\tranp\Desktop\DienMayQT\DienMayQT\DienMayQT\bin\System.Web.WebPages.xml
+C:\Users\tranp\Desktop\DienMayQT\DienMayQT\DienMayQT\bin\System.Web.WebPages.Deployment.xml
+C:\Users\tranp\Desktop\DienMayQT\DienMayQT\DienMayQT\bin\System.Web.WebPages.Razor.xml
+C:\Users\tranp\Desktop\DienMayQT\DienMayQT\DienMayQT\bin\Newtonsoft.Json.xml
+C:\Users\tranp\Desktop\DienMayQT\DienMayQT\DienMayQT\bin\Antlr3.Runtime.pdb
+C:\Users\tranp\Desktop\DienMayQT\DienMayQT\DienMayQT\bin\EntityFramework.xml
+C:\Users\tranp\Desktop\DienMayQT\DienMayQT\DienMayQT\bin\EntityFramework.SqlServer.xml
+C:\Users\tranp\Desktop\DienMayQT\DienMayQT\DienMayQT\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\tranp\Desktop\DienMayQT\DienMayQT\DienMayQT\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\tranp\Desktop\DienMayQT\DienMayQT\DienMayQT\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\tranp\Desktop\DienMayQT\DienMayQT\DienMayQT\bin\Microsoft.Owin.xml
+C:\Users\tranp\Desktop\DienMayQT\DienMayQT\DienMayQT\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\tranp\Desktop\DienMayQT\DienMayQT\DienMayQT\bin\Microsoft.Owin.Security.xml
+C:\Users\tranp\Desktop\DienMayQT\DienMayQT\DienMayQT\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\tranp\Desktop\DienMayQT\DienMayQT\DienMayQT\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\tranp\Desktop\DienMayQT\DienMayQT\DienMayQT\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\tranp\Desktop\DienMayQT\DienMayQT\DienMayQT\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\tranp\Desktop\DienMayQT\DienMayQT\DienMayQT\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\tranp\Desktop\DienMayQT\DienMayQT\DienMayQT\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\tranp\Desktop\DienMayQT\DienMayQT\DienMayQT\obj\Debug\DienMayQT.csprojResolveAssemblyReference.cache
+C:\Users\tranp\Desktop\DienMayQT\DienMayQT\DienMayQT\obj\Debug\DienMayQT.dll
+C:\Users\tranp\Desktop\DienMayQT\DienMayQT\DienMayQT\obj\Debug\DienMayQT.pdb
+C:\Users\PC\Desktop\DienMayQT\DienMayQT\DienMayQT\DienMayQT\bin\DienMayQT.dll.config
+C:\Users\PC\Desktop\DienMayQT\DienMayQT\DienMayQT\DienMayQT\bin\DienMayQT.dll
+C:\Users\PC\Desktop\DienMayQT\DienMayQT\DienMayQT\DienMayQT\bin\DienMayQT.pdb
+C:\Users\PC\Desktop\DienMayQT\DienMayQT\DienMayQT\DienMayQT\bin\Antlr3.Runtime.dll
+C:\Users\PC\Desktop\DienMayQT\DienMayQT\DienMayQT\DienMayQT\bin\EntityFramework.dll
+C:\Users\PC\Desktop\DienMayQT\DienMayQT\DienMayQT\DienMayQT\bin\EntityFramework.SqlServer.dll
+C:\Users\PC\Desktop\DienMayQT\DienMayQT\DienMayQT\DienMayQT\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\PC\Desktop\DienMayQT\DienMayQT\DienMayQT\DienMayQT\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\PC\Desktop\DienMayQT\DienMayQT\DienMayQT\DienMayQT\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\PC\Desktop\DienMayQT\DienMayQT\DienMayQT\DienMayQT\bin\Microsoft.Owin.dll
+C:\Users\PC\Desktop\DienMayQT\DienMayQT\DienMayQT\DienMayQT\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\PC\Desktop\DienMayQT\DienMayQT\DienMayQT\DienMayQT\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\PC\Desktop\DienMayQT\DienMayQT\DienMayQT\DienMayQT\bin\Microsoft.Owin.Security.dll
+C:\Users\PC\Desktop\DienMayQT\DienMayQT\DienMayQT\DienMayQT\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\PC\Desktop\DienMayQT\DienMayQT\DienMayQT\DienMayQT\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\PC\Desktop\DienMayQT\DienMayQT\DienMayQT\DienMayQT\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\PC\Desktop\DienMayQT\DienMayQT\DienMayQT\DienMayQT\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\PC\Desktop\DienMayQT\DienMayQT\DienMayQT\DienMayQT\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\PC\Desktop\DienMayQT\DienMayQT\DienMayQT\DienMayQT\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\PC\Desktop\DienMayQT\DienMayQT\DienMayQT\DienMayQT\bin\Newtonsoft.Json.dll
+C:\Users\PC\Desktop\DienMayQT\DienMayQT\DienMayQT\DienMayQT\bin\Owin.dll
+C:\Users\PC\Desktop\DienMayQT\DienMayQT\DienMayQT\DienMayQT\bin\System.Web.Helpers.dll
+C:\Users\PC\Desktop\DienMayQT\DienMayQT\DienMayQT\DienMayQT\bin\System.Web.Mvc.dll
+C:\Users\PC\Desktop\DienMayQT\DienMayQT\DienMayQT\DienMayQT\bin\System.Web.Optimization.dll
+C:\Users\PC\Desktop\DienMayQT\DienMayQT\DienMayQT\DienMayQT\bin\System.Web.Razor.dll
+C:\Users\PC\Desktop\DienMayQT\DienMayQT\DienMayQT\DienMayQT\bin\System.Web.WebPages.Deployment.dll
+C:\Users\PC\Desktop\DienMayQT\DienMayQT\DienMayQT\DienMayQT\bin\System.Web.WebPages.dll
+C:\Users\PC\Desktop\DienMayQT\DienMayQT\DienMayQT\DienMayQT\bin\System.Web.WebPages.Razor.dll
+C:\Users\PC\Desktop\DienMayQT\DienMayQT\DienMayQT\DienMayQT\bin\WebGrease.dll
+C:\Users\PC\Desktop\DienMayQT\DienMayQT\DienMayQT\DienMayQT\bin\System.Web.Helpers.xml
+C:\Users\PC\Desktop\DienMayQT\DienMayQT\DienMayQT\DienMayQT\bin\System.Web.Mvc.xml
+C:\Users\PC\Desktop\DienMayQT\DienMayQT\DienMayQT\DienMayQT\bin\System.Web.Optimization.xml
+C:\Users\PC\Desktop\DienMayQT\DienMayQT\DienMayQT\DienMayQT\bin\System.Web.Razor.xml
+C:\Users\PC\Desktop\DienMayQT\DienMayQT\DienMayQT\DienMayQT\bin\System.Web.WebPages.xml
+C:\Users\PC\Desktop\DienMayQT\DienMayQT\DienMayQT\DienMayQT\bin\System.Web.WebPages.Deployment.xml
+C:\Users\PC\Desktop\DienMayQT\DienMayQT\DienMayQT\DienMayQT\bin\System.Web.WebPages.Razor.xml
+C:\Users\PC\Desktop\DienMayQT\DienMayQT\DienMayQT\DienMayQT\bin\Newtonsoft.Json.xml
+C:\Users\PC\Desktop\DienMayQT\DienMayQT\DienMayQT\DienMayQT\bin\Antlr3.Runtime.pdb
+C:\Users\PC\Desktop\DienMayQT\DienMayQT\DienMayQT\DienMayQT\bin\EntityFramework.xml
+C:\Users\PC\Desktop\DienMayQT\DienMayQT\DienMayQT\DienMayQT\bin\EntityFramework.SqlServer.xml
+C:\Users\PC\Desktop\DienMayQT\DienMayQT\DienMayQT\DienMayQT\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\PC\Desktop\DienMayQT\DienMayQT\DienMayQT\DienMayQT\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\PC\Desktop\DienMayQT\DienMayQT\DienMayQT\DienMayQT\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\PC\Desktop\DienMayQT\DienMayQT\DienMayQT\DienMayQT\bin\Microsoft.Owin.xml
+C:\Users\PC\Desktop\DienMayQT\DienMayQT\DienMayQT\DienMayQT\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\PC\Desktop\DienMayQT\DienMayQT\DienMayQT\DienMayQT\bin\Microsoft.Owin.Security.xml
+C:\Users\PC\Desktop\DienMayQT\DienMayQT\DienMayQT\DienMayQT\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\PC\Desktop\DienMayQT\DienMayQT\DienMayQT\DienMayQT\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\PC\Desktop\DienMayQT\DienMayQT\DienMayQT\DienMayQT\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\PC\Desktop\DienMayQT\DienMayQT\DienMayQT\DienMayQT\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\PC\Desktop\DienMayQT\DienMayQT\DienMayQT\DienMayQT\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\PC\Desktop\DienMayQT\DienMayQT\DienMayQT\DienMayQT\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\PC\Desktop\DienMayQT\DienMayQT\DienMayQT\DienMayQT\obj\Debug\DienMayQT.csprojResolveAssemblyReference.cache
+C:\Users\PC\Desktop\DienMayQT\DienMayQT\DienMayQT\DienMayQT\obj\Debug\DienMayQT.dll
+C:\Users\PC\Desktop\DienMayQT\DienMayQT\DienMayQT\DienMayQT\obj\Debug\DienMayQT.pdb

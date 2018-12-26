@@ -1,0 +1,124 @@
+﻿@model DienMayQT.Models.Product
+
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2 class="title" style="color:#FFD700">CẬP NHẬT SP</h2>
+
+
+@using (Html.BeginForm("Edit", "ProductAdmin", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal" align="center">
+        @Html.ValidationSummary(true)
+        @Html.HiddenFor(model => model.ID)
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.ProductCode, "Mã SP", new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.TextBoxFor(model => model.ProductCode, new { @class = "form-control" , @readonly = "readonly"})
+                @Html.ValidationMessageFor(model => model.ProductCode)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.ProductName, "Tên sản phẩm", new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.TextBoxFor(model => model.ProductName, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.ProductName)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.ProductTypeID, "Loại SP", new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownListFor(model => model.ProductTypeID, null, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.ProductTypeID)
+            </div>  
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.SalePrice, "Giá bán", new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.TextBoxFor(model => model.SalePrice, new { type = "number", @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.SalePrice)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.OriginPrice, "Giá gốc", new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.TextBoxFor(model => model.OriginPrice, new { type = "number", @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.OriginPrice)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.InstallmentPrice, "Giá góp", new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.TextBoxFor(model => model.InstallmentPrice, new { type = "number", @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.InstallmentPrice)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Quantity, "Tồn kho", new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.TextBoxFor(model => model.Quantity, new { type = "number", @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.Quantity)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.Label("Avatar", "Hình SP", new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.TextBox("ImageFile", null, new { type = "file", accept = "image/gif, image/jpeg, image/png", onchange = "readURL(this);", @class = "form-control" })
+                @Html.ValidationMessage("ImageFile")
+               
+                <img id="HinhSP" src="@Url.Action("Details", new { imageName = Model.Avatar})" />
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Status, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Status)
+                @Html.ValidationMessageFor(model => model.Status)
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Save" class="btn btn-default" style="font-size: 20px; margin-bottom: 20px; height: 48px; width: 110px; background-color: #4CAF50; color: white" />
+            </div>
+        </div>
+    </div>
+}
+
+<div align="right" style="margin-bottom:50px;margin-top:10px;margin-right:50px;">
+    <button class="cancel-btn" onclick="location.href='@Url.Action("Index", "ProductAdmin")'">Cancel</button>
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+    <script>
+        function readURL(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+                reader.onload = function (e) {
+                    $('#HinhSP')
+                        .attr('src', e.target.result);
+                    //.width(150)
+                    //.height(200);
+                };
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+    </script>
+}
+
+
+

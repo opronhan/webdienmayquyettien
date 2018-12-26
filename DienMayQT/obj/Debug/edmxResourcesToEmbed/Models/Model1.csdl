@@ -119,6 +119,7 @@
     <Property Name="image" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="status" Type="Boolean" Nullable="false" />
     <Property Name="nameAds" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="content" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
   </EntityType>
   <EntityType Name="User">
     <Key>
@@ -129,6 +130,18 @@
     <Property Name="password" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
     <Property Name="email" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
     <Property Name="phone" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="fullname" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="UserTypeID" Type="Int32" />
+    <NavigationProperty Name="UserType" Relationship="Self.FK__Users__UserTypeI__29221CFB" FromRole="Users" ToRole="UserType" />
+  </EntityType>
+  <EntityType Name="UserType">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserTypeCode" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="UserTypeName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Users" Relationship="Self.FK__Users__UserTypeI__29221CFB" FromRole="UserType" ToRole="Users" />
   </EntityType>
   <Association Name="FK_CashBillDetail_CashBill">
     <End Role="CashBill" Type="Self.CashBill" Multiplicity="1" />
@@ -202,7 +215,19 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <EntityContainer Name="DmQT09Entities3" annotation:LazyLoadingEnabled="true">
+  <Association Name="FK__Users__UserTypeI__29221CFB">
+    <End Role="UserType" Type="Self.UserType" Multiplicity="0..1" />
+    <End Role="Users" Type="Self.User" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UserType">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Users">
+        <PropertyRef Name="UserTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="DmQT09Entities4" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="Accounts" EntityType="Self.Account" />
     <EntitySet Name="CashBills" EntityType="Self.CashBill" />
     <EntitySet Name="CashBillDetails" EntityType="Self.CashBillDetail" />
@@ -214,6 +239,7 @@
     <EntitySet Name="ProductTypes" EntityType="Self.ProductType" />
     <EntitySet Name="slideAds" EntityType="Self.slideAd" />
     <EntitySet Name="Users" EntityType="Self.User" />
+    <EntitySet Name="UserTypes" EntityType="Self.UserType" />
     <AssociationSet Name="FK_CashBillDetail_CashBill" Association="Self.FK_CashBillDetail_CashBill">
       <End Role="CashBill" EntitySet="CashBills" />
       <End Role="CashBillDetail" EntitySet="CashBillDetails" />
@@ -237,6 +263,10 @@
     <AssociationSet Name="FK_Product_ProductType" Association="Self.FK_Product_ProductType">
       <End Role="ProductType" EntitySet="ProductTypes" />
       <End Role="Product" EntitySet="Products" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Users__UserTypeI__29221CFB" Association="Self.FK__Users__UserTypeI__29221CFB">
+      <End Role="UserType" EntitySet="UserTypes" />
+      <End Role="Users" EntitySet="Users" />
     </AssociationSet>
   </EntityContainer>
 </Schema>

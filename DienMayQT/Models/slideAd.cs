@@ -17,14 +17,14 @@ namespace DienMayQT.Models
     public partial class slideAd
     {
         public int ID { get; set; }
-
-        public bool status { get; set; }
         public string image { get; set; }
-
+        public bool status { get; set; }
         [Required(ErrorMessage = "Vui lòng nhập tên ảnh quảng cáo")]
         [StringLength(100, MinimumLength = 5, ErrorMessage = "Tên ảnh quảng cáo không được ít hơn 5 ký tự và nhiều hơn 100 ký tự")]
         public string nameAds { get; set; }
-
+        [Required(ErrorMessage = "Vui lòng nhập nội dung quảng cáo")]
+        [StringLength(100, MinimumLength = 20, ErrorMessage = "Nội dung quảng cáo không được ít hơn 20 ký tự và nhiều hơn 100 ký tự")]
+        public string content { get; set; }
         public HttpPostedFileBase ImageFile { get; set; }
     }
 }

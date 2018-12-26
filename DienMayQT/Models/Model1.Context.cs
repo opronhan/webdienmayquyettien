@@ -16,7 +16,7 @@ namespace DienMayQT.Models
     public partial class DmQT09Entities : DbContext
     {
         public DmQT09Entities()
-            : base("name=DmQT09Entities3")
+            : base("name=DmQT09Entities4")
         {
         }
     
@@ -36,5 +36,6 @@ namespace DienMayQT.Models
         public virtual DbSet<ProductType> ProductTypes { get; set; }
         public virtual DbSet<slideAd> slideAds { get; set; }
         public virtual DbSet<User> Users { get; set; }
+        public virtual DbSet<UserType> UserTypes { get; set; }
     }
 }

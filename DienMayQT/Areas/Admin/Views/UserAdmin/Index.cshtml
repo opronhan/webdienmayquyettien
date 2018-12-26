@@ -7,6 +7,10 @@
 
 <h2 class="title">Quản lý tài khoản người dùng</h2>
 
+<p style="text-align:right;">
+    <button class="create-btn" onclick="location.href='@Url.Action("Create", "UserAdmin")'"><i class="fa fa-plus-circle" aria-hidden="true"></i>  Create</button>
+</p>
+
 <div class="card mb-3">
     <div class="card-header">
         <i class="fa fa-table"></i> Danh sách tài khoản người dùng
@@ -16,24 +20,31 @@
             <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                 <thead>
                     <tr>
-                        <th>Tài khoản</th>
+                        <th>Tên người dùng</th>
+                        <th>Tên tài khoản</th>
                         <th>Mật khẩu</th>
                         <th>Email</th>
                         <th>Số điện thoại</th>
+                        <th>Loại người dùng</th>
                     </tr>
                 </thead>
                 <tfoot>
                     <tr>
-                        <th>Tài khoản</th>
+                        <th>Tên người dùng</th>
+                        <th>Tên tài khoản</th>
                         <th>Mật khẩu</th>
                         <th>Email</th>
                         <th>Số điện thoại</th>
+                        <th>Loại người dùng</th>
                     </tr>
                 </tfoot>
                 <tbody>
                     @foreach (var item in Model)
                     {
                         <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.fullname)
+                            </td>
                             <td>
                                 @Html.DisplayFor(modelItem => item.username)
                             </td>
@@ -47,6 +58,10 @@
                                 @Html.DisplayFor(modelItem => item.phone)
                             </td>
                             <td>
+                                @Html.DisplayFor(modelItem => item.UserType.UserTypeName)
+                            </td>
+                            <td>
+                                <button type="button" class="btn btn-success" onclick="location.href='@Url.Action("Edit", new { id = item.ID })'"><i class="fa fa-pencil" aria-hidden="true"></i></button>
                                 <button type="button" class="btn btn-danger" onclick="location.href='@Url.Action("Delete", new { id = item.ID })'"><i class="fa fa-trash" aria-hidden="true"></i></button>
                             </td>
                         </tr>

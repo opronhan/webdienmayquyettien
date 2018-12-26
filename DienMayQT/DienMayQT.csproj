@@ -224,6 +224,9 @@
     <Compile Include="Models\User.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\UserType.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -378,13 +381,6 @@
     <Content Include="Areas\Admin\Views\CashBillAdmin\Edit.cshtml" />
     <Content Include="Areas\Admin\Views\CashBillAdmin\Index.cshtml" />
     <Content Include="Areas\Admin\Views\LoginAdmin\Login.cshtml" />
-    <EntityDeploy Include="Models\Model1.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>Model1.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <Content Include="Models\Model1.edmx.diagram">
-      <DependentUpon>Model1.edmx</DependentUpon>
-    </Content>
     <Content Include="Areas\Admin\Views\UserAdmin\Delete.cshtml" />
     <Content Include="Areas\Admin\Views\UserAdmin\Index.cshtml" />
     <Content Include="Areas\Admin\Views\ProductTypeAdmin\Create.cshtml" />
@@ -394,6 +390,15 @@
     <Content Include="Areas\Admin\Views\AdsAdmin\Delete.cshtml" />
     <Content Include="Areas\Admin\Views\AdsAdmin\Edit.cshtml" />
     <Content Include="Areas\Admin\Views\AdsAdmin\Index.cshtml" />
+    <EntityDeploy Include="Models\Model1.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Model1.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\Model1.edmx.diagram">
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Content>
+    <Content Include="Areas\Admin\Views\UserAdmin\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\UserAdmin\Edit.cshtml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\dataTables.bootstrap4.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />

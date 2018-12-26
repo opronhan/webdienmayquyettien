@@ -56,7 +56,6 @@ namespace DienMayQT.Models
 
         public Nullable<bool> Status { get; set; }
     
-    
         public virtual ICollection<CashBillDetail> CashBillDetails { get; set; }
         public virtual ICollection<InstallmentBillDetail> InstallmentBillDetails { get; set; }
         public virtual ProductType ProductType { get; set; }

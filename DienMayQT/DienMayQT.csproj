@@ -165,6 +165,7 @@
     <Compile Include="Areas\Admin\Controllers\CashBillAdminController.cs" />
     <Compile Include="Areas\Admin\Controllers\LoginAdminController.cs" />
     <Compile Include="Areas\Admin\Controllers\ProductAdminController.cs" />
+    <Compile Include="Areas\Admin\Controllers\UserAdminController.cs" />
     <Compile Include="Areas\Admin\Controllers\ValidateAntiForgeryTokenOnAllPosts.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -213,6 +214,12 @@
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\ProductType.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\slideAd.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\User.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -365,6 +372,10 @@
     <Content Include="Assert_Login\vendor\bootstrap\css\bootstrap-reboot.min.css.map" />
     <Content Include="Assert_Login\vendor\bootstrap\css\bootstrap.css.map" />
     <Content Include="Assert_Login\vendor\bootstrap\css\bootstrap.min.css.map" />
+    <Content Include="Areas\Admin\Views\CashBillAdmin\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\CashBillAdmin\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\CashBillAdmin\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\LoginAdmin\Login.cshtml" />
     <EntityDeploy Include="Models\Model1.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>Model1.Designer.cs</LastGenOutput>
@@ -372,10 +383,8 @@
     <Content Include="Models\Model1.edmx.diagram">
       <DependentUpon>Model1.edmx</DependentUpon>
     </Content>
-    <Content Include="Areas\Admin\Views\CashBillAdmin\Create.cshtml" />
-    <Content Include="Areas\Admin\Views\CashBillAdmin\Edit.cshtml" />
-    <Content Include="Areas\Admin\Views\CashBillAdmin\Index.cshtml" />
-    <Content Include="Areas\Admin\Views\LoginAdmin\Login.cshtml" />
+    <Content Include="Areas\Admin\Views\UserAdmin\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\UserAdmin\Index.cshtml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\dataTables.bootstrap4.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />

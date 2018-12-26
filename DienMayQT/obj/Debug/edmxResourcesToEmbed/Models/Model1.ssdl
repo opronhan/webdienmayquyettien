@@ -99,6 +99,25 @@
     <Property Name="ProductTypeCode" Type="varchar" MaxLength="3" Nullable="false" />
     <Property Name="ProductTypeName" Type="nvarchar" MaxLength="100" Nullable="false" />
   </EntityType>
+  <EntityType Name="slideAds">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="image" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="status" Type="bit" Nullable="false" />
+    <Property Name="nameAds" Type="varchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="Users">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="username" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="password" Type="varchar" MaxLength="255" />
+    <Property Name="email" Type="varchar" MaxLength="255" />
+    <Property Name="phone" Type="varchar" MaxLength="255" />
+  </EntityType>
   <Association Name="FK_CashBillDetail_CashBill">
     <End Role="CashBill" Type="Self.CashBill" Multiplicity="1" />
     <End Role="CashBillDetail" Type="Self.CashBillDetail" Multiplicity="*" />
@@ -181,6 +200,8 @@
     <EntitySet Name="NumberOfProductCode" EntityType="Self.NumberOfProductCode" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Product" EntityType="Self.Product" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="ProductType" EntityType="Self.ProductType" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="slideAds" EntityType="Self.slideAds" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
     <AssociationSet Name="FK_CashBillDetail_CashBill" Association="Self.FK_CashBillDetail_CashBill">
       <End Role="CashBill" EntitySet="CashBill" />
       <End Role="CashBillDetail" EntitySet="CashBillDetail" />

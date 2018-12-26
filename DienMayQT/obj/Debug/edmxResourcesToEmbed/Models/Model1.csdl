@@ -111,6 +111,25 @@
     <Property Name="ProductTypeName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
     <NavigationProperty Name="Products" Relationship="Self.FK_Product_ProductType" FromRole="ProductType" ToRole="Product" />
   </EntityType>
+  <EntityType Name="slideAd">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="image" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="status" Type="Boolean" Nullable="false" />
+    <Property Name="nameAds" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="username" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="password" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="email" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="phone" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+  </EntityType>
   <Association Name="FK_CashBillDetail_CashBill">
     <End Role="CashBill" Type="Self.CashBill" Multiplicity="1" />
     <End Role="CashBillDetail" Type="Self.CashBillDetail" Multiplicity="*" />
@@ -183,7 +202,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <EntityContainer Name="DmQT09Entities2" annotation:LazyLoadingEnabled="true">
+  <EntityContainer Name="DmQT09Entities3" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="Accounts" EntityType="Self.Account" />
     <EntitySet Name="CashBills" EntityType="Self.CashBill" />
     <EntitySet Name="CashBillDetails" EntityType="Self.CashBillDetail" />
@@ -193,6 +212,8 @@
     <EntitySet Name="NumberOfProductCodes" EntityType="Self.NumberOfProductCode" />
     <EntitySet Name="Products" EntityType="Self.Product" />
     <EntitySet Name="ProductTypes" EntityType="Self.ProductType" />
+    <EntitySet Name="slideAds" EntityType="Self.slideAd" />
+    <EntitySet Name="Users" EntityType="Self.User" />
     <AssociationSet Name="FK_CashBillDetail_CashBill" Association="Self.FK_CashBillDetail_CashBill">
       <End Role="CashBill" EntitySet="CashBills" />
       <End Role="CashBillDetail" EntitySet="CashBillDetails" />

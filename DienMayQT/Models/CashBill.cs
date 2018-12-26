@@ -19,7 +19,7 @@ namespace DienMayQT.Models
         {
             this.CashBillDetails = new HashSet<CashBillDetail>();
         }
-    
+
         public int ID { get; set; }
         public string BillCode { get; set; }
         [Required(ErrorMessage = "Vui lòng nhập tên khách hàng")]
@@ -38,9 +38,7 @@ namespace DienMayQT.Models
         public string Shipper { get; set; }
         public string Note { get; set; }
         public int GrandTotal { get; set; }
-        
+    
         public virtual ICollection<CashBillDetail> CashBillDetails { get; set; }
-        public virtual ICollection<Product> Product { get; set; }
     }
-   
 }

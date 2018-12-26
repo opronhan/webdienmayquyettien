@@ -12,15 +12,11 @@ namespace DienMayQT.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class CashBillDetail
+    public partial class slideAd
     {
         public int ID { get; set; }
-        public int BillID { get; set; }
-        public int ProductID { get; set; }
-        public int Quantity { get; set; }
-        public int SalePrice { get; set; }
-    
-        public virtual CashBill CashBill { get; set; }
-        public virtual Product Product { get; set; }
+        public string image { get; set; }
+        public bool status { get; set; }
+        public string nameAds { get; set; }
     }
 }

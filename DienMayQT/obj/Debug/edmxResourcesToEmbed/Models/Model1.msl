@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-  <EntityContainerMapping StorageEntityContainer="DmQT09ModelStoreContainer" CdmEntityContainer="DmQT09Entities2">
+  <EntityContainerMapping StorageEntityContainer="DmQT09ModelStoreContainer" CdmEntityContainer="DmQT09Entities3">
     <EntitySetMapping Name="Accounts">
       <EntityTypeMapping TypeName="DmQT09Model.Account">
         <MappingFragment StoreEntitySet="Account">
@@ -106,6 +106,27 @@
           <ScalarProperty Name="ID" ColumnName="ID" />
           <ScalarProperty Name="ProductTypeCode" ColumnName="ProductTypeCode" />
           <ScalarProperty Name="ProductTypeName" ColumnName="ProductTypeName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="slideAds">
+      <EntityTypeMapping TypeName="DmQT09Model.slideAd">
+        <MappingFragment StoreEntitySet="slideAds">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="image" ColumnName="image" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="nameAds" ColumnName="nameAds" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="DmQT09Model.User">
+        <MappingFragment StoreEntitySet="Users">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="username" ColumnName="username" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="phone" ColumnName="phone" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

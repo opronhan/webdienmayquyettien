@@ -104,6 +104,25 @@
           <Property Name="ProductTypeCode" Type="varchar" MaxLength="3" Nullable="false" />
           <Property Name="ProductTypeName" Type="nvarchar" MaxLength="100" Nullable="false" />
         </EntityType>
+        <EntityType Name="slideAds">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="image" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="status" Type="bit" Nullable="false" />
+          <Property Name="nameAds" Type="varchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="Users">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="username" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="password" Type="varchar" MaxLength="255" />
+          <Property Name="email" Type="varchar" MaxLength="255" />
+          <Property Name="phone" Type="varchar" MaxLength="255" />
+        </EntityType>
         <Association Name="FK_CashBillDetail_CashBill">
           <End Role="CashBill" Type="Self.CashBill" Multiplicity="1" />
           <End Role="CashBillDetail" Type="Self.CashBillDetail" Multiplicity="*" />
@@ -186,6 +205,8 @@
           <EntitySet Name="NumberOfProductCode" EntityType="Self.NumberOfProductCode" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Product" EntityType="Self.Product" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="ProductType" EntityType="Self.ProductType" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="slideAds" EntityType="Self.slideAds" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
           <AssociationSet Name="FK_CashBillDetail_CashBill" Association="Self.FK_CashBillDetail_CashBill">
             <End Role="CashBill" EntitySet="CashBill" />
             <End Role="CashBillDetail" EntitySet="CashBillDetail" />
@@ -327,6 +348,25 @@
           <Property Name="ProductTypeName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
           <NavigationProperty Name="Products" Relationship="Self.FK_Product_ProductType" FromRole="ProductType" ToRole="Product" />
         </EntityType>
+        <EntityType Name="slideAd">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="image" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="status" Type="Boolean" Nullable="false" />
+          <Property Name="nameAds" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="User">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="username" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="password" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="email" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="phone" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+        </EntityType>
         <Association Name="FK_CashBillDetail_CashBill">
           <End Role="CashBill" Type="Self.CashBill" Multiplicity="1" />
           <End Role="CashBillDetail" Type="Self.CashBillDetail" Multiplicity="*" />
@@ -399,7 +439,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="DmQT09Entities2" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="DmQT09Entities3" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Accounts" EntityType="Self.Account" />
           <EntitySet Name="CashBills" EntityType="Self.CashBill" />
           <EntitySet Name="CashBillDetails" EntityType="Self.CashBillDetail" />
@@ -409,6 +449,8 @@
           <EntitySet Name="NumberOfProductCodes" EntityType="Self.NumberOfProductCode" />
           <EntitySet Name="Products" EntityType="Self.Product" />
           <EntitySet Name="ProductTypes" EntityType="Self.ProductType" />
+          <EntitySet Name="slideAds" EntityType="Self.slideAd" />
+          <EntitySet Name="Users" EntityType="Self.User" />
           <AssociationSet Name="FK_CashBillDetail_CashBill" Association="Self.FK_CashBillDetail_CashBill">
             <End Role="CashBill" EntitySet="CashBills" />
             <End Role="CashBillDetail" EntitySet="CashBillDetails" />
@@ -439,7 +481,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="DmQT09ModelStoreContainer" CdmEntityContainer="DmQT09Entities2">
+        <EntityContainerMapping StorageEntityContainer="DmQT09ModelStoreContainer" CdmEntityContainer="DmQT09Entities3">
           <EntitySetMapping Name="Accounts">
             <EntityTypeMapping TypeName="DmQT09Model.Account">
               <MappingFragment StoreEntitySet="Account">
@@ -545,6 +587,27 @@
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="ProductTypeCode" ColumnName="ProductTypeCode" />
                 <ScalarProperty Name="ProductTypeName" ColumnName="ProductTypeName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="slideAds">
+            <EntityTypeMapping TypeName="DmQT09Model.slideAd">
+              <MappingFragment StoreEntitySet="slideAds">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="image" ColumnName="image" />
+                <ScalarProperty Name="status" ColumnName="status" />
+                <ScalarProperty Name="nameAds" ColumnName="nameAds" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Users">
+            <EntityTypeMapping TypeName="DmQT09Model.User">
+              <MappingFragment StoreEntitySet="Users">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="username" ColumnName="username" />
+                <ScalarProperty Name="password" ColumnName="password" />
+                <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="phone" ColumnName="phone" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

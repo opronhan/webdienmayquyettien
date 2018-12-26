@@ -165,6 +165,7 @@
     <Compile Include="Areas\Admin\Controllers\CashBillAdminController.cs" />
     <Compile Include="Areas\Admin\Controllers\LoginAdminController.cs" />
     <Compile Include="Areas\Admin\Controllers\ProductAdminController.cs" />
+    <Compile Include="Areas\Admin\Controllers\ProductTypeAdminController.cs" />
     <Compile Include="Areas\Admin\Controllers\UserAdminController.cs" />
     <Compile Include="Areas\Admin\Controllers\ValidateAntiForgeryTokenOnAllPosts.cs" />
     <Compile Include="Controllers\AccountController.cs" />
@@ -385,6 +386,9 @@
     </Content>
     <Content Include="Areas\Admin\Views\UserAdmin\Delete.cshtml" />
     <Content Include="Areas\Admin\Views\UserAdmin\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\ProductTypeAdmin\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\ProductTypeAdmin\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\ProductTypeAdmin\Index.cshtml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\dataTables.bootstrap4.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />

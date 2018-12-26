@@ -1,0 +1,49 @@
+﻿@model DienMayQT.Models.ProductType
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2 class="title" style="color:#4CAF50">THÊM LOẠI SẢN PHẨM</h2>
+
+@using (Html.BeginForm("Create", "ProductTypeAdmin", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal" align="center">
+        @Html.ValidationSummary(true)
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.ProductTypeCode, "Mã Loại SP", new { @class = "control-label col-md-4" })
+            <div class="col-md-10">
+                @Html.TextBoxFor(model => model.ProductTypeCode, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.ProductTypeCode)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.ProductTypeName, "Tên Loại SP", new { @class = "control-label col-md-4" })
+            <div class="col-md-10">
+                @Html.TextBoxFor(model => model.ProductTypeName, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.ProductTypeName)
+            </div>
+        </div>
+
+
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn btn-default" style="font-size: 20px; margin-bottom: 20px; height: 48px; width: 110px; background-color: #4CAF50; color: white" />
+            </div>
+
+        </div>
+    </div>
+}
+
+<div align="right" style="margin-bottom:50px;margin-top:10px;margin-right:50px;">
+    <button class="cancel-btn" onclick="location.href='@Url.Action("Index", "ProductTypeAdmin")'">Cancel</button>
+</div>
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

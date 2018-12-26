@@ -1,0 +1,57 @@
+﻿@model IEnumerable<DienMayQT.Models.ProductType>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2 class="title">Quản lý loại sản phẩm</h2>
+
+<p style="text-align:right;">
+    <button class="create-btn" onclick="location.href='@Url.Action("Create", "ProductTypeAdmin")'"><i class="fa fa-plus-circle" aria-hidden="true"></i>  Create</button>
+</p>
+
+<div class="card mb-3">
+    <div class="card-header">
+        <i class="fa fa-table"></i> Danh sách loại sản phẩm
+    </div>
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th>Product Type Code</th>
+                        <th>Product Type Name</th>
+                    </tr>
+                </thead>
+                <tfoot>
+                    <tr>
+                        <th>Product Type Code</th>
+                        <th>Product Type Name</th>
+                    </tr>
+                </tfoot>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.ProductTypeCode)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.ProductTypeName)
+                            </td>
+                            <td>
+                                <button type="button" class="btn btn-success" onclick="location.href='@Url.Action("Edit", new { id = item.ID })'"><i class="fa fa-pencil" aria-hidden="true"></i></button>
+
+                            </td>
+                        </tr>
+                    }
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
+</div>
+
+

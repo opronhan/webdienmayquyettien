@@ -19,7 +19,7 @@ namespace DienMayQT.Areas.Admin.Controllers
         public ActionResult Index()
         {
             var user = db.Users.OrderByDescending(x => x.ID).ToList();
-            if (Session["Username"] != null)
+            if (Session["Username"] != null && Session["KTPer"] != null)
             {
                 return View(user);
             }

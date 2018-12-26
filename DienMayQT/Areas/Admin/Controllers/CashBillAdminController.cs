@@ -18,7 +18,7 @@ namespace DienMayQT.Areas.Admin.Controllers
         public ActionResult Index()
         {
             var cashbill = db.CashBills.OrderByDescending(x => x.ID).ToList();
-            if (Session["Username"] != null)
+            if (Session["Username"] != null && Session["NVKDPer"] != null)
             {
                 return View(cashbill);
             }

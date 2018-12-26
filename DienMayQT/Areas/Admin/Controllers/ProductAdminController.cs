@@ -22,7 +22,7 @@ namespace DienMayQT.Areas.Admin.Controllers
         public ActionResult Index()
         {
             var product = db.Products.OrderByDescending(x => x.ID).ToList();
-            if (Session["Username"] != null)
+            if (Session["Username"] != null && Session["NVKDPer"] != null)
             {   
                 return View(product);
             }

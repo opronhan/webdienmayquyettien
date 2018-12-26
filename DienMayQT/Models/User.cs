@@ -33,5 +33,7 @@ namespace DienMayQT.Models
         public Nullable<int> UserTypeID { get; set; }
     
         public virtual UserType UserType { get; set; }
+
+        
     }
 }

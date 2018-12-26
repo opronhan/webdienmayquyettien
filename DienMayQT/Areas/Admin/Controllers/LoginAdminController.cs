@@ -14,35 +14,30 @@ namespace DienMayQT.Areas.Admin.Controllers
         // GET: /Admin/Login/
         public ActionResult Login()
         {
-
-            if (Session["Username"] == null)
-            {
+           
                 return View();
-            }
-            else
-            {
-                return RedirectToAction("Index", "ProductAdmin");
-            }
+           
         }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Login(Account objUser)
+        public ActionResult Login(User objUser)
         {
 
             using (DmQT09Entities db = new DmQT09Entities())
             {
-                var obj = db.Accounts.Where(a => a.Username.Equals(objUser.Username) && a.Password.Equals(objUser.Password)).FirstOrDefault();
+                var obj = db.Users.Where(a => a.username.Equals(objUser.username) && a.password.Equals(objUser.password)).FirstOrDefault();
                 if (obj != null)
                 {
-                    Session["Username"] = obj.Fullname.ToString();
-                    return RedirectToAction("Index","ProductAdmin");
+                    Session["UserType"] = obj.UserType.UserTypeCode.ToString();
+                    Session["Username"] = obj.fullname.ToString();
+                    return RedirectToAction("Permision", "Permision");
                 }
             }
 
             return View(objUser);
         }
-
+      
         public ActionResult LogOut()
         {
             FormsAuthentication.SignOut();

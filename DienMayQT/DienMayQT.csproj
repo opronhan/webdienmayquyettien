@@ -165,6 +165,7 @@
     <Compile Include="Areas\Admin\Controllers\AdsAdminController.cs" />
     <Compile Include="Areas\Admin\Controllers\CashBillAdminController.cs" />
     <Compile Include="Areas\Admin\Controllers\LoginAdminController.cs" />
+    <Compile Include="Areas\Admin\Controllers\PermisionController.cs" />
     <Compile Include="Areas\Admin\Controllers\ProductAdminController.cs" />
     <Compile Include="Areas\Admin\Controllers\ProductTypeAdminController.cs" />
     <Compile Include="Areas\Admin\Controllers\UserAdminController.cs" />
@@ -447,6 +448,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Admin\Models\" />
+    <Folder Include="Areas\Admin\Views\Permision\" />
     <Folder Include="ImgAds\" />
   </ItemGroup>
   <ItemGroup>

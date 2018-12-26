@@ -1,4 +1,4 @@
-﻿@model DienMayQT.Models.Account
+﻿@model DienMayQT.Models.User
 
 @{
     ViewBag.Title = "Login";
@@ -44,7 +44,7 @@
                         </span>
 
                         <div class="wrap-input100 validate-input" data-validate="Username is required">
-                            @Html.TextBoxFor(m => m.Username, new { @class = "input100", placeholder = "Username" })
+                            @Html.TextBoxFor(m => m.username, new { @class = "input100", placeholder = "Username" })
 
                             <span class="focus-input100"></span>
                             <span class="symbol-input100">
@@ -53,7 +53,7 @@
                         </div>
 
                         <div class="wrap-input100 validate-input" data-validate="Password is required">
-                            @Html.PasswordFor(m => m.Password, new { @class = "input100", placeholder = "Password" })
+                            @Html.PasswordFor(m => m.password, new { @class = "input100", placeholder = "Password" })
                             <span class="focus-input100"></span>
                             <span class="symbol-input100">
                                 <i class="fa fa-lock" aria-hidden="true"></i>

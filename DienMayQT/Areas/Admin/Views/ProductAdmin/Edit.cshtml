@@ -78,7 +78,7 @@
                 @Html.TextBox("ImageFile", null, new { type = "file", accept = "image/gif, image/jpeg, image/png", onchange = "readURL(this);", @class = "form-control" })
                 @Html.ValidationMessage("ImageFile")
                
-                <img id="HinhSP" src="@Url.Action("Details", new { imageName = Model.Avatar})" />
+                <img id="HinhSP" src="@Url.Action("Details", new { imageName = Model.Avatar})" style="width:150px;height:150px;margin-top:20px;" />
             </div>
         </div>
 

@@ -162,6 +162,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
+    <Compile Include="Areas\Admin\Controllers\AdsAdminController.cs" />
     <Compile Include="Areas\Admin\Controllers\CashBillAdminController.cs" />
     <Compile Include="Areas\Admin\Controllers\LoginAdminController.cs" />
     <Compile Include="Areas\Admin\Controllers\ProductAdminController.cs" />
@@ -389,6 +390,10 @@
     <Content Include="Areas\Admin\Views\ProductTypeAdmin\Create.cshtml" />
     <Content Include="Areas\Admin\Views\ProductTypeAdmin\Edit.cshtml" />
     <Content Include="Areas\Admin\Views\ProductTypeAdmin\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\AdsAdmin\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\AdsAdmin\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\AdsAdmin\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\AdsAdmin\Index.cshtml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\dataTables.bootstrap4.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
@@ -437,6 +442,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Admin\Models\" />
+    <Folder Include="ImgAds\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

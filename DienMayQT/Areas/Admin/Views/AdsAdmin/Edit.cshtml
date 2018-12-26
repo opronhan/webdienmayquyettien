@@ -1,0 +1,67 @@
+﻿@model DienMayQT.Models.slideAd
+
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+<h2 class="title" style="color:#FFD700">CẬP NHẬT HÌNH QUẢNG CÁO</h2>
+
+
+@using (Html.BeginForm("Edit", "AdsAdmin", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal" align="center">
+        @Html.ValidationSummary(true)
+        @Html.HiddenFor(model => model.ID)
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.nameAds, "Tên hình quảng cáo", new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.TextBoxFor(model => model.nameAds, new { @class = "form-control"})
+                @Html.ValidationMessageFor(model => model.nameAds)
+            </div>
+        </div>
+
+        
+        <div class="form-group">
+            @Html.Label("image", "Hình quảng cáo", new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.TextBox("ImageFile", null, new { type = "file", accept = "image/gif, image/jpeg, image/png", onchange = "readURL(this);", @class = "form-control" })
+                @Html.ValidationMessage("ImageFile")
+
+                <img id="HinhAds" src="@Url.Action("Details", new { imageName = Model.image})" style="width:150px;height:150px;margin-top:20px;" />
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Save" class="btn btn-default" style="font-size: 20px; margin-bottom: 20px; height: 48px; width: 110px; background-color: #4CAF50; color: white" />
+            </div>
+        </div>
+    </div>
+}
+
+<div align="right" style="margin-bottom:50px;margin-top:10px;margin-right:50px;">
+    <button class="cancel-btn" onclick="location.href='@Url.Action("Index", "AdsAdmin")'">Cancel</button>
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+    <script>
+        function readURL(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+                reader.onload = function (e) {
+                    $('#HinhAds')
+                        .attr('src', e.target.result);
+                    //.width(150)
+                    //.height(200);
+                };
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+    </script>
+}

@@ -23,6 +23,8 @@
                     <tr>
                         <th>Image Ads Name</th>
                         <th>Image</th>
+                        <th>Content</th>
+                        <th>Status</th>
                         <th>Action</th>
                     </tr>
                 </thead>
@@ -30,6 +32,8 @@
                     <tr>
                         <th>Image Ads Name</th>
                         <th>Image</th>
+                        <th>Content</th>
+                        <th>Status</th>
                         <th>Action</th>
                     </tr>
                 </tfoot>
@@ -44,6 +48,15 @@
                             <td>
                                 <img src="/imgads/@Url.Content(item.image)" width="150px" height="150px" />
                             </td>
+
+                            <td>
+                                @Html.DisplayFor(modelItem => item.content)
+                            </td>
+
+                            <td>
+                                @Html.DisplayFor(modelItem => item.status)
+                            </td>
+
                             <td>
                                 <button type="button" class="btn btn-success" onclick="location.href='@Url.Action("Edit", new { id = item.ID })'"><i class="fa fa-pencil" aria-hidden="true"></i></button>
                                 <button type="button" class="btn btn-danger" onclick="location.href='@Url.Action("Delete", new { id = item.ID })'"><i class="fa fa-trash" aria-hidden="true"></i></button>

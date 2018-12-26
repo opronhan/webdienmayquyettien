@@ -24,6 +24,22 @@
         </div>
 
         <div class="form-group">
+            @Html.LabelFor(model => model.content, "Nội dung", new { @class = "control-label col-md-4" })
+            <div class="col-md-10">
+                @Html.TextBoxFor(model => model.content, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.content)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.status, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.status)
+                @Html.ValidationMessageFor(model => model.status)
+            </div>
+        </div>
+
+        <div class="form-group">
             @Html.Label("image", "Hình quảng cáo", new { @class = "control-label col-md-4" })
             <div class="col-md-10">
                 @Html.TextBox("ImageFile", null, new { type = "file", accept = "image/gif, image/jpeg, image/png", onchange = "readURL(this);", @class = "form-control" })

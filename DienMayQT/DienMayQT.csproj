@@ -168,6 +168,7 @@
     <Compile Include="Areas\Admin\Controllers\AdsAdminController.cs" />
     <Compile Include="Areas\Admin\Controllers\CashBillAdminController.cs" />
     <Compile Include="Areas\Admin\Controllers\CashBillDetailsController.cs" />
+    <Compile Include="Areas\Admin\Controllers\CustomersController.cs" />
     <Compile Include="Areas\Admin\Controllers\InstallmentBillDetailsController.cs" />
     <Compile Include="Areas\Admin\Controllers\InstallmentBillsAdminController.cs" />
     <Compile Include="Areas\Admin\Controllers\LoginAdminController.cs" />
@@ -423,6 +424,11 @@
     <Content Include="Areas\Admin\Views\InstallmentBillDetails\Details.cshtml" />
     <Content Include="Areas\Admin\Views\InstallmentBillDetails\Edit.cshtml" />
     <Content Include="Areas\Admin\Views\InstallmentBillDetails\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Customers\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\Customers\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\Customers\Details.cshtml" />
+    <Content Include="Areas\Admin\Views\Customers\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\Customers\Index.cshtml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\dataTables.bootstrap4.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />

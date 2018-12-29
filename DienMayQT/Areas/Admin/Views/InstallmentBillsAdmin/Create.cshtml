@@ -7,11 +7,68 @@
 
 <h2 class="title" style="color:#4CAF50">Thêm hóa đơn trả góp</h2>
 
-@using (Html.BeginForm()) 
+@using (Html.BeginForm("Create","Customers"))
 {
     @Html.AntiForgeryToken()
-    
+
     <div class="form-horizontal" align="center" style="float:left">
+        <h4>Thông tin khách hàng</h4>
+        <hr />
+        @Html.ValidationSummary(true)
+        <div class="form-group">
+            @Html.LabelFor(model => model.Customer.CustomerCode,"Số CMND", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Customer.CustomerCode)
+                @Html.ValidationMessageFor(model => model.Customer.CustomerCode)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Customer.CustomerName,"Tên khách hàng", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Customer.CustomerName)
+                @Html.ValidationMessageFor(model => model.Customer.CustomerName)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Customer.PhoneNumber,"Số điện thoại", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Customer.PhoneNumber)
+                @Html.ValidationMessageFor(model => model.Customer.PhoneNumber)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Customer.Address,"Địa chỉ", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Customer.Address)
+                @Html.ValidationMessageFor(model => model.Customer.Address)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Customer.YearOfBirth,"Năm sinh", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Customer.YearOfBirth)
+                @Html.ValidationMessageFor(model => model.Customer.YearOfBirth)
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+    @using (Html.BeginForm()) 
+    {
+    @Html.AntiForgeryToken() 
+    <div class="form-horizontal" align="center" style="float:right">
+        <h4>Thông tin trả góp</h4>
+        <hr />
         @Html.ValidationSummary(true)
         <div class="form-group">
             @Html.LabelFor(model => model.BillCode,"Mã hóa đơn", htmlAttributes: new { @class = "control-label col-md-6" })
@@ -99,15 +156,14 @@
             </div>
         </div>
     </div>
-}
-@if (Session["cashBill"] != null)
-{
 
-    @Html.Action("Create", "CashBillDetails")
-    @Html.Action("Index", "CashBillDetails")
+
+
+    @Html.Action("Create", "InstallmentBillDetails")
+    @Html.Action("Index", "InstallmentBillDetails")
 
     <br /><br />
-    using (Html.BeginForm("Create2", "CashBillAdmin"))
+    using (Html.BeginForm("Create2", "InstallmentBillsAdmin"))
     {
         @Html.AntiForgeryToken()
         <div class="form-group">

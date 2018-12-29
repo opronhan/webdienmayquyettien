@@ -18,12 +18,12 @@ namespace DienMayQT.Areas.Admin.Controllers
         public PartialViewResult Index()
         {
             if (Session["installment"] == null)
-                Session["cashdetails"] = new List<CashBillDetail>();
-            return PartialView(Session["cashdetails"]);
+                Session["installment"] = new List<InstallmentBillDetail>();
+            return PartialView(Session["installment"]);
         }
-        public int getSalePrice(int Product_ID)
+        public int getInsPrice(int Product_ID)
         {
-            return db.Products.Find(Product_ID).SalePrice;
+            return db.Products.Find(Product_ID).InstallmentPrice;
         }
 
         // GET: Admin/InstallmentBillDetails/Details/5
@@ -44,9 +44,11 @@ namespace DienMayQT.Areas.Admin.Controllers
         // GET: Admin/InstallmentBillDetails/Create
         public ActionResult Create()
         {
-            ViewBag.BillID = new SelectList(db.InstallmentBills, "ID", "BillCode");
-            ViewBag.ProductID = new SelectList(db.Products, "ID", "ProductCode");
-            return View();
+            ViewBag.Product_ID = new SelectList(db.Products, "ID", "ProductName");
+            var model = new InstallmentBillDetail();
+            model.BillID = 0;
+            model.Quantity = 1;
+            return PartialView(model);
         }
 
         // POST: Admin/InstallmentBillDetails/Create
@@ -54,18 +56,25 @@ namespace DienMayQT.Areas.Admin.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ID,BillID,ProductID,Quantity,InstallmentPrice")] InstallmentBillDetail installmentBillDetail)
+        public ActionResult Create(InstallmentBillDetail model)
         {
             if (ModelState.IsValid)
             {
-                db.InstallmentBillDetails.Add(installmentBillDetail);
-                db.SaveChanges();
-                return RedirectToAction("Index");
+                model.ID = Environment.TickCount;
+                model.Product = db.Products.Find(model.ProductID);
+                var installment = Session["installment"] as List<InstallmentBillDetail>;
+                if (installment == null)
+                {
+                    installment = new List<InstallmentBillDetail>();
+                }
+
+                installment.Add(model);
+                Session["cashdetails"] = installment;
+                return RedirectToAction("Create", "InstallmentBillsAdmin");
             }
 
-            ViewBag.BillID = new SelectList(db.InstallmentBills, "ID", "BillCode", installmentBillDetail.BillID);
-            ViewBag.ProductID = new SelectList(db.Products, "ID", "ProductCode", installmentBillDetail.ProductID);
-            return View(installmentBillDetail);
+            ViewBag.ProductID = new SelectList(db.Products, "ID", "ProductCode", model.ProductID);
+            return View(model);
         }
 
         // GET: Admin/InstallmentBillDetails/Edit/5

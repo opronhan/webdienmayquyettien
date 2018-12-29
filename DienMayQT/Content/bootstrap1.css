@@ -219,7 +219,7 @@ sup {
 }
 
 a {
-  color: #007bff;
+  color: #af9d9d;
   text-decoration: none;
   background-color: transparent;
   -webkit-text-decoration-skip: objects;
@@ -5721,7 +5721,7 @@ a.bg-light:focus, a.bg-light:hover {
 }
 
 .bg-dark {
-  background-color: #343a40 !important;
+  background-color: #326a73 !important;
 }
 
 a.bg-dark:focus, a.bg-dark:hover {

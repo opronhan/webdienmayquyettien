@@ -20,6 +20,7 @@
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -39,6 +40,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -110,12 +119,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="EntityFramework">
-      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.dll</HintPath>
-    </Reference>
-    <Reference Include="EntityFramework.SqlServer">
-      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
-    </Reference>
     <Reference Include="Microsoft.AspNet.Identity.Core">
       <HintPath>..\packages\Microsoft.AspNet.Identity.Core.1.0.0\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
     </Reference>
@@ -164,6 +167,9 @@
     <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
     <Compile Include="Areas\Admin\Controllers\AdsAdminController.cs" />
     <Compile Include="Areas\Admin\Controllers\CashBillAdminController.cs" />
+    <Compile Include="Areas\Admin\Controllers\CashBillDetailsController.cs" />
+    <Compile Include="Areas\Admin\Controllers\InstallmentBillDetailsController.cs" />
+    <Compile Include="Areas\Admin\Controllers\InstallmentBillsAdminController.cs" />
     <Compile Include="Areas\Admin\Controllers\LoginAdminController.cs" />
     <Compile Include="Areas\Admin\Controllers\PermisionController.cs" />
     <Compile Include="Areas\Admin\Controllers\ProductAdminController.cs" />
@@ -400,6 +406,23 @@
     </Content>
     <Content Include="Areas\Admin\Views\UserAdmin\Create.cshtml" />
     <Content Include="Areas\Admin\Views\UserAdmin\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\InstallmentBillsAdmin\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\InstallmentBillsAdmin\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\InstallmentBillsAdmin\Details.cshtml" />
+    <Content Include="Areas\Admin\Views\InstallmentBillsAdmin\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\InstallmentBillsAdmin\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\CashBillAdmin\Print.cshtml" />
+    <Content Include="Areas\Admin\Views\CashBillDetails\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\CashBillDetails\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\CashBillDetails\Details.cshtml" />
+    <Content Include="Areas\Admin\Views\CashBillDetails\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\CashBillDetails\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\InstallmentBillsAdmin\Print.cshtml" />
+    <Content Include="Areas\Admin\Views\InstallmentBillDetails\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\InstallmentBillDetails\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\InstallmentBillDetails\Details.cshtml" />
+    <Content Include="Areas\Admin\Views\InstallmentBillDetails\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\InstallmentBillDetails\Index.cshtml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\dataTables.bootstrap4.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />

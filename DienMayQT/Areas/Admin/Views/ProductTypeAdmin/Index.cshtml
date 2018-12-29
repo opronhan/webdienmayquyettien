@@ -5,7 +5,7 @@
     Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
 }
 
-<h2 class="title">Quản lý loại sản phẩm</h2>
+<h2 class="title" style="color:#4CAF50">Quản lý loại sản phẩm</h2>
 
 <p style="text-align:right;">
     <button class="create-btn" onclick="location.href='@Url.Action("Create", "ProductTypeAdmin")'"><i class="fa fa-plus-circle" aria-hidden="true"></i>  Create</button>
@@ -20,18 +20,12 @@
             <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                 <thead>
                     <tr>
-                        <th>Product Type Code</th>
-                        <th>Product Type Name</th>
-                        <th>Action</th>
+                        <th>Mã loại sản phẩm</th>
+                        <th>Tên loại sản phẩm</th>
+                        <th>Chức năng</th>
                     </tr>
                 </thead>
-                <tfoot>
-                    <tr>
-                        <th>Product Type Code</th>
-                        <th>Product Type Name</th>
-                        <th>Action</th>
-                    </tr>
-                </tfoot>
+
                 <tbody>
                     @foreach (var item in Model)
                     {
@@ -53,7 +47,7 @@
             </table>
         </div>
     </div>
-    <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
+
 </div>
 
 

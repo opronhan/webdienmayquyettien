@@ -5,7 +5,7 @@
     Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
 }
 
-<h2 class="title">Quản lý sản phẩm</h2>
+<h2 class="title" style="color:#4CAF50">Quản lý sản phẩm</h2>
 
 <p style="text-align:right;">
     <button class="create-btn" onclick="location.href='@Url.Action("Create", "ProductAdmin")'"><i class="fa fa-plus-circle" aria-hidden="true"></i>  Create</button>
@@ -20,32 +20,19 @@
             <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                 <thead>
                     <tr>
-                        <th>Product Code</th>
-                        <th>Product Name</th>
-                        <th>Sale Price</th>
-                        <th>Origin Price</th>
-                        <th>Installment Price</th>
-                        <th>Quantity</th>
-                        <th>Avatar</th>
-                        <th>Status</th>
-                        <th>Product Type</th>
-                        <th>Action</th>
+                        <th>Mã sản phẩm</th>
+                        <th>Tên sản phẩm</th>
+                        <th>Giá bán</th>
+                        <th>Giá gốc</th>
+                        <th>Giá trả góp</th>
+                        <th>Số lượng</th>
+                        <th>Hình ảnh</th>
+                        <th>Trạng thái</th>
+                        <th>Loại</th>
+                        <th>Chức năng</th>
                     </tr>
                 </thead>
-                <tfoot>
-                    <tr>
-                        <th>Product Code</th>
-                        <th>Product Name</th>
-                        <th>Sale Price</th>
-                        <th>Origin Price</th>
-                        <th>Installment Price</th>
-                        <th>Quantity</th>
-                        <th>Avatar</th>
-                        <th>Status</th>
-                        <th>Product Type</th>
-                        <th>Action</th>
-                    </tr>
-                </tfoot>
+
                 <tbody>
                     @foreach (var item in Model)
 {
@@ -89,5 +76,5 @@
             </table>
         </div>
     </div>
-    <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
+
 </div>

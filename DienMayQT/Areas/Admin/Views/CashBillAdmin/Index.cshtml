@@ -4,7 +4,7 @@
     ViewBag.Title = "Index";
     Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
 }
-
+<h2 class="title" style="color:#4CAF50">Quản lý hóa đơn tiền mặt</h2>
 <p style="text-align:right;">
     <button class="create-btn" onclick="location.href='@Url.Action("Create", "CashBillAdmin")'"><i class="fa fa-plus-circle" aria-hidden="true"></i>  Create</button>
 </p>
@@ -18,30 +18,18 @@
             <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                 <thead>
                     <tr>
-                        <th>Bill Code</th>
-                        <th>Customer Name</th>
-                        <th>Phone Number</th>
-                        <th>Address</th>
-                        <th>Date</th>
-                        <th>Shipper</th>
-                        <th>Note</th>
-                        <th>Grand Total</th>
-                        <th>Action</th>
+                        <th>Mã hóa đơn</th>
+                        <th>Tên khách hàng</th>
+                        <th>Số điện thoại</th>
+                        <th>Địa chỉ</th>
+                        <th>Thời gian</th>
+                        <th>Người giao hàng</th>
+                        <th>Ghi chú</th>
+                        <th>Tổng tiền</th>
+                        <th>Chức năng</th>
                     </tr>
                 </thead>
-                <tfoot>
-                    <tr>
-                        <th>Bill Code</th>
-                        <th>Customer Name</th>
-                        <th>Phone Number</th>
-                        <th>Address</th>
-                        <th>Date</th>
-                        <th>Shipper</th>
-                        <th>Note</th>
-                        <th>Grand Total</th>
-                        <th>Action</th>
-                    </tr>
-                </tfoot>
+
                 <tbody>
                     @foreach (var item in Model)
                     {
@@ -82,5 +70,4 @@
             </table>
         </div>
     </div>
-    <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
 </div>

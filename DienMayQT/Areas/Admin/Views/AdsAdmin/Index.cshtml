@@ -6,7 +6,7 @@
 }
 
 
-<h2 class="title">Quản lý ảnh quảng cáo</h2>
+<h2 class="title" style="color:#4CAF50">Quản lý ảnh quảng cáo</h2>
 
 <p style="text-align:right;">
     <button class="create-btn" onclick="location.href='@Url.Action("Create", "AdsAdmin")'"><i class="fa fa-plus-circle" aria-hidden="true"></i>  Create</button>
@@ -21,22 +21,14 @@
             <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                 <thead>
                     <tr>
-                        <th>Image Ads Name</th>
-                        <th>Image</th>
-                        <th>Content</th>
-                        <th>Status</th>
-                        <th>Action</th>
+                        <th>Tên hình ảnh</th>
+                        <th>Hình ảnh</th>
+                        <th>Nội dung</th>
+                        <th>Trạng thái</th>
+                        <th>Chức năng</th>
                     </tr>
                 </thead>
-                <tfoot>
-                    <tr>
-                        <th>Image Ads Name</th>
-                        <th>Image</th>
-                        <th>Content</th>
-                        <th>Status</th>
-                        <th>Action</th>
-                    </tr>
-                </tfoot>
+
                 <tbody>
                     @foreach (var item in Model)
                     {
@@ -68,5 +60,5 @@
             </table>
         </div>
     </div>
-    <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
+
 </div>

@@ -1,0 +1,102 @@
+﻿@model IEnumerable<DienMayQT.Models.InstallmentBill>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2 class="title" style="color:#4CAF50">Quản lý hóa đơn trả góp</h2>
+<p style="text-align:right;">
+    <button class="create-btn" onclick="location.href='@Url.Action("Create", "InstallmentBillsAdmin")'"><i class="fa fa-plus-circle" aria-hidden="true"></i>  Create</button>
+</p>
+<div class="card mb-3">
+    <div class="card-header">
+        <i class="fa fa-table"></i> Danh sách hóa đơn trả góp
+    </div>
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th>
+                            Mã hóa đơn
+                        </th>
+                        <th>
+                            Thời gian lập hóa đơn
+                        </th>
+                        <th>
+                            Tên người giao hàng
+                        </th>
+                        <th>
+                            Ghi chú
+                        </th>
+                        <th>
+                            Hình thức trả góp
+                        </th>
+                        <th>
+                            Hạn trả góp
+                        </th>
+                        <th>
+                            Tổng tiền
+                        </th>
+                        <th>
+                            Đã đưa
+                        </th>
+                        <th>
+                           Còn nợ
+                        </th>
+                        <th>
+                            Số CMND
+                        </th>
+                        <th>Chức năng</th>
+                    </tr>
+                </thead>
+                <tfoot>
+                    
+                </tfoot>
+                <tbody>
+@foreach (var item in Model)
+{
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.BillCode)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Date)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Shipper)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Note)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Method)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Period)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.GrandTotal)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Taken)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Remain)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Customer.CustomerCode)
+        </td>
+        <td>
+            <button type="button" class="btn btn-success" onclick="location.href='@Url.Action("Edit", new { id = item.ID })'"><i class="fa fa-pencil" aria-hidden="true"></i></button>
+            <button type="button" class="btn btn-primary" onclick="location.href='@Url.Action("Print", new { id = item.ID })'"><i class="fa fa-print" aria-hidden="true"></i></button>
+        </td>
+    </tr>
+}
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

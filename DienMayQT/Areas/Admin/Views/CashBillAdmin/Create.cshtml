@@ -4,25 +4,17 @@
     Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
 }
 
-<h2 class="title" style="color:#4CAF50">THÊM HÓA ĐƠN TIỀN MẶT</h2>
+<h2 class="title" style="color:#4CAF50">Thêm hóa đơn tiền mặt</h2>
 
-@using (Html.BeginForm("Create", "CashBillAdmin", FormMethod.Post, new {@name = "form-create", enctype = "multipart/form-data" }))
+@using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
-    <div class="form-horizontal" align="center">
+    <div class="form-horizontal" align="center" style="float:left">
 
         @Html.ValidationSummary(true)
 
         <div class="form-group">
-            @Html.LabelFor(model => model.BillCode, "Mã hóa đơn", new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.TextBoxFor(model => model.BillCode, new { @class = "form-control", @readonly = "readonly" })
-                @Html.ValidationMessageFor(model => model.BillCode)
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.CustomerName, "Tên khách hàng", new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.CustomerName, "Tên khách hàng", new { @class = "control-label col-md-6" })
             <div class="col-md-10">
                 @Html.TextBoxFor(model => model.CustomerName, new { @class = "form-control" })
                 @Html.ValidationMessageFor(model => model.CustomerName)
@@ -30,7 +22,7 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.PhoneNumber, "Số điện thoại", new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.PhoneNumber, "Số điện thoại", new { @class = "control-label col-md-6" })
             <div class="col-md-10">
                 @Html.TextBoxFor(model => model.PhoneNumber, new { @class = "form-control" })
                 @Html.ValidationMessageFor(model => model.PhoneNumber)
@@ -38,24 +30,16 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.Address, "Địa chỉ", new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.Address, "Địa chỉ", new { @class = "control-label col-md-6" })
             <div class="col-md-10">
                 @Html.TextBoxFor(model => model.Address, new { @class = "form-control" })
                 @Html.ValidationMessageFor(model => model.Address)
             </div>
         </div>
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.Date, "Ngày tạo", new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.TextBoxFor(model => model.Date, new { type = "date", @class = "form-control" })
-
-                @Html.ValidationMessageFor(model => model.Date)
-            </div>
-        </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.Shipper, "Tên người giao", new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.Shipper, "Tên người giao", new { @class = "control-label col-md-6" })
             <div class="col-md-10">
                 @Html.TextBoxFor(model => model.Shipper, new { @class = "form-control" })
                 @Html.ValidationMessageFor(model => model.Shipper)
@@ -63,7 +47,7 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.Note, "Ghi chú", new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.Note, "Ghi chú", new { @class = "control-label col-md-6" })
             <div class="col-md-10">
                 @Html.TextBoxFor(model => model.Note, new { @class = "form-control" })
                 @Html.ValidationMessageFor(model => model.Note)
@@ -71,118 +55,48 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.GrandTotal, "Tổng tiền", new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.TextBoxFor(model => model.GrandTotal, new { @class = "form-control", @readonly = "readonly" })
-                @Html.ValidationMessageFor(model => model.GrandTotal)
-            </div>
-        </div>
-       
-        <div class="form-group">
-                <div style="background-color:white;width:500px;">
-                    <h4 style="padding-top:20px;padding-bottom:20px;">Sản phẩm</h4>
-                    <label class="control-label">
-                        Mã sản phẩm
-                    </label>
-                    <div class="col-md-4">
-                        <input type="text" id="productCode" name="productCode" placeholder="Mã sản phẩm" class="form-control" />
-                    </div>
-                    <label class="control-label">
-                        Số lượng
-                    </label>
-                    <div class="col-md-4">
-                        <input type="number" id="quantity" name="quantity" placeholder="Số lượng" class="form-control" />
-                    </div>
-                    <div class="col-md-2" style="margin-top:20px;margin-bottom:20px;    "> 
-                        <a id="addToList" class="btn btn-primary">Add To List</a>
-                    </div>
-                    <table id="detailsTable"  class="table table-bordered">
-                        <thead>
-                            <tr>
-                                <th>Mã sản phẩm</th>
-                                <th>Số lượng</th>
-                                <th>Gía tiền</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                           
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        
-        <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
-                <button id="createBill" type="submit" style="font-size: 20px; margin-bottom: 20px; height: 48px; width: 110px; background-color: #4CAF50; color: white">Create</button>
+                <input type="submit" value="Create" class="btn btn-default" style="font-size: 20px; margin-bottom: 20px; height: 48px; width: 110px; background-color: #4CAF50; color: white" />
             </div>
-        </div>
-      
+
+        </div>    
     </div>
 }
+
+@if (Session["cashBill"] != null)
+{
+
+    @Html.Action("Create", "CashBillDetails")
+    @Html.Action("Index", "CashBillDetails")
+
+    <br /><br />
+    using (Html.BeginForm("Create2", "CashBillAdmin"))
+    {
+        @Html.AntiForgeryToken()
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Lập hóa đơn" class="btn btn-primary" />
+            </div>
+        </div>
+    }
+}
+
 <div align="right" style="margin-bottom:50px;margin-top:10px;margin-right:50px;">
     <button class="cancel-btn" onclick="location.href='@Url.Action("Index", "ProductAdmin")'">Cancel</button>
 </div>
 
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")
-
-
-<script> //Script cho thêm bill
-    //Add Multiple Order.
-    $("#addToList").click(function (e) {
-        e.preventDefault();
-
-        if ($.trim($("#productCode").val()) == "" || $.trim($("#quantity").val()) == "") return;
-
-        var productCode = $("#productCode").val(),
-            quantity = $("#quantity").val(),
-            detailsTableBody = $("#detailsTable tbody");
-
-        var productItem = '<tr><td>' + productCode + '</td><td>' + quantity  + '</td><td><a data-itemId="0" href="#" class="deleteItem btn btn-danger">Remove</a></td></tr>';
-        detailsTableBody.append(productItem);
-        clearItem();
-    });
-    //After Add A New Order In The List, Clear Clean The Form For Add More Order.
-    function clearItem() {
-        $("#productCode").val('');
-        $("#quantity").val('');
-    }
-    // After Add A New Order In The List, If You Want, You Can Remove It.
-    $(document).on('click', 'a.deleteItem', function (e) {
-        e.preventDefault();
-        var $self = $(this);
-        if ($(this).attr('data-itemId') == "0") {
-            $(this).parents('tr').css("background-color", "#ff6347").fadeOut(800, function () {
-                $(this).remove();
-            });
-        }
-    });
-    document.getElementById("createBill").addEventListener("click", function () {
-        var billArr = [];
-        billArr.length = 0;
-
-        $.each($("#detailsTable tbody tr"), function () {
-            billArr.push({
-                productID: $(this).find('td:eq(0)').html(),
-                quantity: $(this).find('td:eq(1)').html()
-            });
+    <script>
+    $('#ProductID').change(function () {
+        var url = '@Url.Action("getSalePrice", "CashBillDetails")';
+        url = url + '?Product_ID=' + $(this).val();
+        $.get(url, function (data) {
+            $('#SalePrice').val(data);
         });
-        var token = $('[name=__RequestVerificationToken]').val();
-        var headers = {};
-        headers["__RequestVerificationToken"] = token;
-        $.ajax({
-            contentType: 'application/json; charset=utf-8',
-            dataType: 'html',
-            type: 'POST',
-            url: "/Admin/CashBillAdmin/Create",
-            headers: headers,
-            data: JSON.stringify({
-                billDetail: billArr
-            }),
-        });
-       
-        
     });
+
 </script>
+
 
 }

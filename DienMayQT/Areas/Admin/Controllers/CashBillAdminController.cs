@@ -7,6 +7,7 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using DienMayQT.Models;
+using System.Transactions;
 
 namespace DienMayQT.Areas.Admin.Controllers
 {
@@ -17,10 +18,9 @@ namespace DienMayQT.Areas.Admin.Controllers
         // GET: /Admin/CashBillAdmin/
         public ActionResult Index()
         {
-            var cashbill = db.CashBills.OrderByDescending(x => x.ID).ToList();
             if (Session["Username"] != null && Session["NVKDPer"] != null)
             {
-                return View(cashbill);
+                return View(db.CashBills.ToList());
             }
             else
             {
@@ -31,9 +31,9 @@ namespace DienMayQT.Areas.Admin.Controllers
         
 
         // GET: /Admin/CashBillAdmin/Create
-        public ActionResult Create()
+        public ActionResult Create()    
         {
-            return View();
+            return View(Session["cashBill"]);
         }
 
         // POST: /Admin/CashBillAdmin/Create
@@ -41,29 +41,47 @@ namespace DienMayQT.Areas.Admin.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryTokenOnAllPosts]
-        public ActionResult Create(CashBillDetail[] billDetail,CashBill model)
+        public ActionResult Create(CashBill model)
         {
-            if (ModelState.IsValid && billDetail != null)
+            if (ModelState.IsValid)
             {
-                int grandTotal = 0;
-                foreach (var item in billDetail)
-                {
-                    
-                    CashBillDetail O = new CashBillDetail();
-                    Product thisProduct = db.Products.Where(p => p.ID == item.ProductID).FirstOrDefault();
-                    O.BillID = model.ID;
-                    O.ProductID = item.ProductID;
-                    O.Quantity = item.Quantity;
-                    O.SalePrice = thisProduct.SalePrice * item.Quantity;
-                    grandTotal = grandTotal + (thisProduct.SalePrice * item.Quantity);
-                    db.CashBillDetails.Add(O);
-                }
-                model.GrandTotal = grandTotal;
-                db.CashBills.Add(model);
-                db.SaveChanges();
-                return RedirectToAction("Index");
+                Session["cashBill"] = model;
             }
             return View(model);
+        }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Create2()
+        {
+            using (var scope = new TransactionScope())
+                try
+                {
+                    var c = Session["cashBill"] as CashBill;
+                    var d = Session["cashdetails"] as List<CashBillDetail>;
+                    c.Date = DateTime.Now;
+                    c.GrandTotal = (int)Session["total"];
+                    db.CashBills.Add(c);
+                    db.SaveChanges();
+
+                    foreach (var details in d)
+                    {
+                        details.BillID = c.ID;
+                        details.Product = null;
+                        db.CashBillDetails.Add(details);
+                    }
+                    db.SaveChanges();
+                    scope.Complete();
+
+                    Session["cashBill"] = null;
+                    Session["cashdetails"] = null;
+                    Session["total"] = null;
+                    return RedirectToAction("Index");
+                }
+                catch (Exception e)
+                {
+                    ModelState.AddModelError("", e.Message);
+                }
+            return View("Create");
         }
 
         // GET: /Admin/CashBillAdmin/Edit/5
@@ -122,6 +140,20 @@ namespace DienMayQT.Areas.Admin.Controllers
             db.SaveChanges();
             return RedirectToAction("Index");
         }
+
+        public ActionResult Print(int id)
+        {
+            CashBill cashbill = db.CashBills.Find(id);
+            CashBillDetail d = db.CashBillDetails.Find(id);
+            
+            if (cashbill == null)
+            {
+                return HttpNotFound();
+            }
+
+            return View(cashbill);           
+        }
+
 
         protected override void Dispose(bool disposing)
         {

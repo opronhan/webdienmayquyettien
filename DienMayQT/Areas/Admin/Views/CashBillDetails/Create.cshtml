@@ -1,0 +1,47 @@
+﻿@model DienMayQT.Models.CashBillDetail
+
+@{
+    ViewBag.Title = "Create";
+}
+
+
+    @using (Html.BeginForm("Create2", "CashBillDetails")) 
+    {
+        @Html.AntiForgeryToken()
+        
+        <div class="form-horizontal" style="float:right;width:400px"  align="center">
+
+            @Html.ValidationSummary(true)
+    
+            <div class="form-group">
+                @Html.LabelFor(model => model.ProductID, "Sản phẩm", htmlAttributes: new { @class = "control-label col-md-6" })
+                <div class="col-md-10">
+                    @Html.DropDownListFor(model => model.ProductID, (SelectList)ViewData["Product_ID"], String.Empty)
+                    @Html.ValidationMessageFor(model => model.ProductID)
+                </div>
+            </div>
+    
+            <div class="form-group">
+                @Html.LabelFor(model => model.Quantity,"Số lượng", htmlAttributes: new { @class = "control-label col-md-6" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.Quantity)
+                    @Html.ValidationMessageFor(model => model.Quantity)
+                </div>
+            </div>
+    
+            <div class="form-group">
+                @Html.LabelFor(model => model.SalePrice,"Giá bán", htmlAttributes: new { @class = "control-label col-md-6" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.SalePrice)
+                    @Html.ValidationMessageFor(model => model.SalePrice)
+                </div>
+            </div>
+    
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <input type="submit" value="Create" class="btn btn-default" />
+                </div>
+            </div>
+        </div>
+    }
+

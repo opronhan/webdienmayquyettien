@@ -5,83 +5,46 @@
     Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
 }
 
-<h2 class="title">Xóa sản phẩm</h2>
+<h2 class="title" style="color:#4CAF50">Xóa sản phẩm</h2>
 
-<h3 style="color: #FF4500;text-align:center;">Are you sure you want to delete this Product?</h3>
+<h3 style="color: #FF4500;text-align:center;">Bạn có muốn xóa sản phẩm này không ?</h3>
 <div>
     <hr />
     <dl class="dl-horizontal" align="center">
-        <dt>
-            @Html.DisplayNameFor(model => model.ProductCode)
-        </dt>
+        <dt>Mã sản phẩm</dt>
+        <dd>@Html.DisplayFor(model => model.ProductCode)</dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.ProductCode)
-        </dd>
+        <dt>Tên sản phẩm</dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.ProductName)
-        </dt>
+        <dd>@Html.DisplayFor(model => model.ProductName)</dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.ProductName)
-        </dd>
+        <dt>Giá bán</dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.SalePrice)
-        </dt>
+        <dd>@String.Format("{0:0,0}", Model.SalePrice) VNĐ</dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.SalePrice)
-        </dd>
+        <dt> Giá gốc </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.OriginPrice)
-        </dt>
+        <dd>@String.Format("{0:0,0}", Model.OriginPrice) VNĐ</dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.OriginPrice)
-        </dd>
+        <dt>Giá trả góp</dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.InstallmentPrice)
-        </dt>
+        <dd>@String.Format("{0:0,0}", Model.InstallmentPrice)</dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.InstallmentPrice)
-        </dd>
+        <dt>Số lượng</dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Quantity)
-        </dt>
+        <dd>@Html.DisplayFor(model => model.Quantity)</dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.Quantity)
-        </dd>
+        <dt>Hình ảnh</dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Avatar)
-        </dt>
+        <dd>@Html.DisplayFor(model => model.Avatar)</dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.Avatar)
-        </dd>
+        <dt>Trạng thái</dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Status)
-        </dt>
+        <dd>@Html.DisplayFor(model => model.Status)</dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.Status)
-        </dd>
+        <dt>Mã loại</dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.ProductType.ProductTypeCode)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.ProductType.ProductTypeCode)
-        </dd>
+        <dd>@Html.DisplayFor(model => model.ProductType.ProductTypeCode)</dd>
 
     </dl>
 
@@ -91,9 +54,10 @@
             @Html.AntiForgeryToken()
 
             <div class="form-actions no-color">
-                <input type="submit" value="Delete" class="btn btn-default" style="font-size: 20px; margin-bottom: 20px; background-color: #D3D3D3; color: white; margin-top: 12px; height: 48px; width: 110px;" />
+                <input type="submit" value="Xóa" class="btn btn-danger" style="font-size: 20px; margin-bottom: 20px; background-color: #f51212; color: white; margin-top: 12px; height: 48px; width: 110px;" />
+                <button class="cancel-btn" onclick="location.href='@Url.Action("Index", "ProductAdmin")'" style="margin-left:250px;margin-bottom:50px;margin-top:50px;">Hủy</button>
             </div>
         }
-        <button class="cancel-btn" onclick="location.href='@Url.Action("Index", "ProductAdmin")'" style="margin-left:250px;margin-bottom:50px;margin-top:50px;">Cancel</button>
+        
     </div>
 </div>

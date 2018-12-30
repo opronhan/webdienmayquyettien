@@ -1,0 +1,8 @@
+﻿@model IEnumerable<DienMayQT.Models.ProductType>
+
+@foreach (var item in Model)
+{
+<div class="col-lg-2 col-md-3 col-sm-3 col-xs-12 ">
+    <div class="ps-block--category" data-mh="category"><a class="ps-block__overlay" href="#"></a><i class="furniture-television"></i><a href="#">@item.ProductTypeName</a></div>
+</div>
+}

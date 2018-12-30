@@ -16,14 +16,8 @@
 
         @Html.ValidationSummary(true)
         @Html.HiddenFor(model => model.ID)
+        @Html.HiddenFor(model => model.BillCode)
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.BillCode,"Mã hóa đơn", htmlAttributes: new { @class = "control-label col-md-6" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.BillCode)
-                @Html.ValidationMessageFor(model => model.BillCode)
-            </div>
-        </div>
 
         <div class="form-group">
             @Html.LabelFor(model => model.CustomerID, "Số CMND", htmlAttributes: new { @class = "control-label col-md-6" })

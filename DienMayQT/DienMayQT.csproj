@@ -280,6 +280,7 @@
     <Content Include="favicon.ico" />
     <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Front-End\store.ico" />
     <Content Include="Front-End\store.png" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />

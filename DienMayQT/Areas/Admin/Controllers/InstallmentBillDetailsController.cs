@@ -17,13 +17,13 @@ namespace DienMayQT.Areas.Admin.Controllers
         // GET: Admin/InstallmentBillDetails
         public PartialViewResult Index()
         {
-            if (Session["installment"] == null)
-                Session["installment"] = new List<InstallmentBillDetail>();
-            return PartialView(Session["installment"]);
+            if (Session["installBillDetail"] == null)
+                Session["installBillDetail"] = new List<InstallmentBillDetail>();
+            return PartialView(Session["installBillDetail"]);
         }
-        public int getInsPrice(int Product_ID)
+        public int InstallmentPrice(int ProductID)
         {
-            return db.Products.Find(Product_ID).InstallmentPrice;
+            return db.Products.Find(ProductID).InstallmentPrice;
         }
 
         // GET: Admin/InstallmentBillDetails/Details/5
@@ -42,9 +42,9 @@ namespace DienMayQT.Areas.Admin.Controllers
         }
 
         // GET: Admin/InstallmentBillDetails/Create
-        public ActionResult Create()
+        public PartialViewResult Create()
         {
-            ViewBag.Product_ID = new SelectList(db.Products, "ID", "ProductName");
+            ViewBag.ProductID = new SelectList(db.Products, "ID", "ProductName");
             var model = new InstallmentBillDetail();
             model.BillID = 0;
             model.Quantity = 1;
@@ -56,50 +56,65 @@ namespace DienMayQT.Areas.Admin.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(InstallmentBillDetail model)
+        public ActionResult Create2(InstallmentBillDetail model)
         {
             if (ModelState.IsValid)
             {
                 model.ID = Environment.TickCount;
                 model.Product = db.Products.Find(model.ProductID);
-                var installment = Session["installment"] as List<InstallmentBillDetail>;
-                if (installment == null)
+                var installBillDetail = Session["installBillDetail"] as List<InstallmentBillDetail>;
+                if (installBillDetail == null)
                 {
-                    installment = new List<InstallmentBillDetail>();
+                    installBillDetail = new List<InstallmentBillDetail>();
                 }
 
-                installment.Add(model);
-                Session["cashdetails"] = installment;
+                installBillDetail.Add(model);
+                Session["installBillDetail"] = installBillDetail;
                 return RedirectToAction("Create", "InstallmentBillsAdmin");
             }
 
-            ViewBag.ProductID = new SelectList(db.Products, "ID", "ProductCode", model.ProductID);
-            return View(model);
+            ViewBag.ProductID = new SelectList(db.Products, "ID", "ProductName", model.ProductID);
+            return View("Create",model);
         }
 
         // GET: Admin/InstallmentBillDetails/Edit/5
-        public ActionResult Edit(int? id)
+        public PartialViewResult Edit(int id)
         {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            InstallmentBillDetail installmentBillDetail = db.InstallmentBillDetails.Find(id);
-            if (installmentBillDetail == null)
-            {
-                return HttpNotFound();
-            }
-            ViewBag.BillID = new SelectList(db.InstallmentBills, "ID", "BillCode", installmentBillDetail.BillID);
-            ViewBag.ProductID = new SelectList(db.Products, "ID", "ProductCode", installmentBillDetail.ProductID);
-            return View(installmentBillDetail);
+
+            List<InstallmentBillDetail> details = db.InstallmentBillDetails.Where(c => c.BillID == id).ToList();
+            if (Session["installBillDetail"] == null)
+                Session["installBillDetail"] = new List<InstallmentBillDetail>();
+            ViewBag.details = details;
+            ViewBag.installBillDetail = Session["installBillDetail"];
+            return PartialView();
         }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Edit2(InstallmentBillDetail installmentBillDetail)
+        {
+            if (ModelState.IsValid)
+            {
+                installmentBillDetail.ID = Environment.TickCount;
+                installmentBillDetail.Product = db.Products.Find(installmentBillDetail.ProductID);
+                var installBillDetail = Session["installBillDetail"] as List<InstallmentBillDetail>;
+                if (installBillDetail == null)
+                    installBillDetail = new List<InstallmentBillDetail>();
+                installBillDetail.Add(installmentBillDetail);
+                Session["installBillDetail"] = installBillDetail;
+                return Redirect(ControllerContext.HttpContext.Request.UrlReferrer.ToString());
+            }
+
+            ViewBag.ProductID = new SelectList(db.Products, "ID", "ProductName", installmentBillDetail.ProductID);
+            return View("Create", installmentBillDetail);
+        }
+
 
         // POST: Admin/InstallmentBillDetails/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ID,BillID,ProductID,Quantity,InstallmentPrice")] InstallmentBillDetail installmentBillDetail)
+        public ActionResult Edit(InstallmentBillDetail installmentBillDetail)
         {
             if (ModelState.IsValid)
             {
@@ -113,18 +128,12 @@ namespace DienMayQT.Areas.Admin.Controllers
         }
 
         // GET: Admin/InstallmentBillDetails/Delete/5
-        public ActionResult Delete(int? id)
+        public ActionResult Delete(int id)
         {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            InstallmentBillDetail installmentBillDetail = db.InstallmentBillDetails.Find(id);
-            if (installmentBillDetail == null)
-            {
-                return HttpNotFound();
-            }
-            return View(installmentBillDetail);
+            var details = Session["installBillDetail"] as List<InstallmentBillDetail>;
+            details = details.Except(details.Where(c => c.ID == id)).ToList();
+            Session["installBillDetail"] = details;
+            return RedirectToAction("Create", "InstallmentBillsAdmin");
         }
 
         // POST: Admin/InstallmentBillDetails/Delete/5

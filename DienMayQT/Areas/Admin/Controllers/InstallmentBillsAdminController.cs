@@ -7,6 +7,7 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using DienMayQT.Models;
+using System.Transactions;
 
 namespace DienMayQT.Areas.Admin.Controllers
 {
@@ -27,7 +28,11 @@ namespace DienMayQT.Areas.Admin.Controllers
                 return RedirectToAction("Login", "LoginAdmin");
             }
         }
-
+        public int takenSession(int taken)
+        {
+            Session["Taken"] = taken;
+            return (int)Session["Taken"];
+        }
         // GET: Admin/InstallmentBillsAdmin/Details/5
         public ActionResult Details(int? id)
         {
@@ -47,7 +52,7 @@ namespace DienMayQT.Areas.Admin.Controllers
         public ActionResult Create()
         {
             ViewBag.CustomerID = new SelectList(db.Customers, "ID", "CustomerCode");
-            return View();
+            return View(Session["installBill"]);
         }
 
         // POST: Admin/InstallmentBillsAdmin/Create
@@ -59,27 +64,57 @@ namespace DienMayQT.Areas.Admin.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.InstallmentBills.Add(installmentBill);
-                db.SaveChanges();
-                return RedirectToAction("Index");
+                Session["installBill"] = installmentBill;
             }
 
             ViewBag.CustomerID = new SelectList(db.Customers, "ID", "CustomerCode", installmentBill.CustomerID);
             return View(installmentBill);
         }
 
-        // GET: Admin/InstallmentBillsAdmin/Edit/5
-        public ActionResult Edit(int? id)
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Create2()
         {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
+            using (var scope = new TransactionScope())
+                try
+                {
+                    var insBill = Session["installBill"] as InstallmentBill;
+                    var insBillDetails = Session["installBillDetail"] as List<InstallmentBillDetail>;
+                    insBill.Date = DateTime.Now;
+                    insBill.GrandTotal = (int)Session["total"];
+                    insBill.Taken = (int)Session["Taken"];
+                    insBill.Remain = ((int)Session["total"] - (int)Session["Taken"]);
+
+                    db.InstallmentBills.Add(insBill);
+                    db.SaveChanges();
+
+                    foreach (var details in insBillDetails)
+                    {
+                        details.BillID = insBill.ID;
+                        details.Product = null;
+                        db.InstallmentBillDetails.Add(details);
+                    }
+                    db.SaveChanges();
+                    scope.Complete();
+
+                    Session["installBill"] = null;
+                    Session["installBillDetail"] = null;
+                    Session["total"] = null;
+                    Session["Taken"] = null;
+                    return RedirectToAction("Index");
+                }
+                catch (Exception e)
+                {
+                    ModelState.AddModelError("", e.Message);
+                }
+            return View("Create");
+        }
+
+        // GET: Admin/InstallmentBillsAdmin/Edit/5
+        public ActionResult Edit(int id)
+        {
             InstallmentBill installmentBill = db.InstallmentBills.Find(id);
-            if (installmentBill == null)
-            {
-                return HttpNotFound();
-            }
+            Session["installBill"] = installmentBill;
             ViewBag.CustomerID = new SelectList(db.Customers, "ID", "CustomerCode", installmentBill.CustomerID);
             return View(installmentBill);
         }
@@ -89,17 +124,21 @@ namespace DienMayQT.Areas.Admin.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ID,BillCode,CustomerID,Date,Shipper,Note,Method,Period,GrandTotal,Taken,Remain")] InstallmentBill installmentBill)
+        public ActionResult Edit(InstallmentBill installmentBill)
         {
             if (ModelState.IsValid)
             {
+                installmentBill.Date = DateTime.Now;
                 db.Entry(installmentBill).State = EntityState.Modified;
+                Session["installBill"] = installmentBill;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
             ViewBag.CustomerID = new SelectList(db.Customers, "ID", "CustomerCode", installmentBill.CustomerID);
             return View(installmentBill);
         }
+
+       
 
         // GET: Admin/InstallmentBillsAdmin/Delete/5
         public ActionResult Delete(int? id)

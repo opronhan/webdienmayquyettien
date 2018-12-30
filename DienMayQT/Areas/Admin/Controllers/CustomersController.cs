@@ -15,11 +15,17 @@ namespace DienMayQT.Areas.Admin.Controllers
         private DmQT09Entities db = new DmQT09Entities();
 
         // GET: Admin/Customers
-        public PartialViewResult Index()
+        public ActionResult Index()
         {
-            if (Session["customer"] == null)
-                Session["customer"] = new List<Customer>();
-            return PartialView(Session["customer"]);
+            var customer = db.Customers.OrderByDescending(x => x.ID).ToList();
+            if (Session["Username"] != null && Session["KTPer"] != null)
+            {
+                return View(customer);
+            }
+            else
+            {
+                return RedirectToAction("Login", "LoginAdmin");
+            }
         }
 
         // GET: Admin/Customers/Details/5
@@ -38,10 +44,9 @@ namespace DienMayQT.Areas.Admin.Controllers
         }
 
         // GET: Admin/Customers/Create
-
-        public PartialViewResult Create()
+        public ActionResult Create()
         {
-            return PartialView();
+            return View();
         }
 
         // POST: Admin/Customers/Create
@@ -49,15 +54,16 @@ namespace DienMayQT.Areas.Admin.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(Customer model)
+        public ActionResult Create([Bind(Include = "ID,CustomerCode,CustomerName,PhoneNumber,Address,YearOfBirth")] Customer customer)
         {
             if (ModelState.IsValid)
             {
-                db.Customers.Add(model);
+                db.Customers.Add(customer);
                 db.SaveChanges();
-                return RedirectToAction("Create", "InstallmentBill");
+                return RedirectToAction("Index");
             }
-            return View("Create",model);
+
+            return View(customer);
         }
 
         // GET: Admin/Customers/Edit/5

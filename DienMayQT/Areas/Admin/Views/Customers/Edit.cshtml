@@ -1,81 +1,69 @@
 ﻿@model DienMayQT.Models.Customer
 
 @{
-    Layout = null;
+    ViewBag.Title = "Edit";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
 }
 
-<!DOCTYPE html>
+<h2 class="title" style="color:#FFD700">Cập nhật thông tin khách hàng</h2>
 
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Edit</title>
-</head>
-<body>
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/jqueryval")
-    
-    
-    @using (Html.BeginForm())
-    {
-        @Html.AntiForgeryToken()
-        
-        <div class="form-horizontal">
-            <h4>Customer</h4>
-            <hr />
-            @Html.ValidationSummary(true)
-            @Html.HiddenFor(model => model.ID)
-    
-            <div class="form-group">
-                @Html.LabelFor(model => model.CustomerCode, htmlAttributes: new { @class = "control-label col-md-2" })
-                <div class="col-md-10">
-                    @Html.EditorFor(model => model.CustomerCode)
-                    @Html.ValidationMessageFor(model => model.CustomerCode)
-                </div>
-            </div>
-    
-            <div class="form-group">
-                @Html.LabelFor(model => model.CustomerName, htmlAttributes: new { @class = "control-label col-md-2" })
-                <div class="col-md-10">
-                    @Html.EditorFor(model => model.CustomerName)
-                    @Html.ValidationMessageFor(model => model.CustomerName)
-                </div>
-            </div>
-    
-            <div class="form-group">
-                @Html.LabelFor(model => model.PhoneNumber, htmlAttributes: new { @class = "control-label col-md-2" })
-                <div class="col-md-10">
-                    @Html.EditorFor(model => model.PhoneNumber)
-                    @Html.ValidationMessageFor(model => model.PhoneNumber)
-                </div>
-            </div>
-    
-            <div class="form-group">
-                @Html.LabelFor(model => model.Address, htmlAttributes: new { @class = "control-label col-md-2" })
-                <div class="col-md-10">
-                    @Html.EditorFor(model => model.Address)
-                    @Html.ValidationMessageFor(model => model.Address)
-                </div>
-            </div>
-    
-            <div class="form-group">
-                @Html.LabelFor(model => model.YearOfBirth, htmlAttributes: new { @class = "control-label col-md-2" })
-                <div class="col-md-10">
-                    @Html.EditorFor(model => model.YearOfBirth)
-                    @Html.ValidationMessageFor(model => model.YearOfBirth)
-                </div>
-            </div>
-    
-            <div class="form-group">
-                <div class="col-md-offset-2 col-md-10">
-                    <input type="submit" value="Save" class="btn btn-default" />
-                </div>
+
+@using (Html.BeginForm("Edit", "Customers", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal" align="center">
+        @Html.ValidationSummary(true)
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.CustomerName, "Tên khách hàng ", new { @class = "control-label col-md-6" })
+            <div class="col-md-10">
+                @Html.TextBoxFor(model => model.CustomerName, new { @class = "form-control"})
+                @Html.ValidationMessageFor(model => model.CustomerName)
             </div>
         </div>
-    }
-    
-    <div>
-        @Html.ActionLink("Back to List", "Index")
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.CustomerCode, "Số CMND", new { @class = "control-label col-md-6" })
+            <div class="col-md-10">
+                @Html.TextBoxFor(model => model.CustomerCode, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.CustomerCode)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.PhoneNumber, "Số điện thoại", new { @class = "control-label col-md-6" })
+            <div class="col-md-10">
+                @Html.TextBoxFor(model => model.PhoneNumber, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.PhoneNumber)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.YearOfBirth, "Năm sinh", new { @class = "control-label col-md-6" })
+            <div class="col-md-10">
+                @Html.TextBoxFor(model => model.YearOfBirth, new { type = "number", @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.YearOfBirth)
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Save" class="btn btn-default" style="font-size: 20px; margin-bottom: 20px; height: 48px; width: 110px; background-color: #4CAF50; color: white" />
+            </div>
+        </div>
     </div>
-</body>
-</html>
+}
+
+<div align="right" style="margin-bottom:50px;margin-top:10px;margin-right:50px;">
+    <button class="cancel-btn" onclick="location.href='@Url.Action("Index", "Customers")'">Cancel</button>
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")   
+}
+
+
+
+
+

@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
-    <link href="store.png" rel="icon">
+    <link href="~/Front-End/store.ico" rel="icon">
     <meta name="author" content="design by Storm">
     <meta name="keywords" content="Điện máy Quyết Tiến">
     <meta name="description" content="Công ty cổ phần TNHH Điện máy Quyết Tiến">
@@ -49,11 +49,11 @@
         </div>
         <nav class="navigation">
             <div class="ps-container">
-                <a class="ps-logo" href="index.html"><img src="~/Front-End/images/logo.png" alt="Điện máy Quyết Tiến"></a>
+                <a class="ps-logo" href="index"><img src="~/Front-End/images/logo.png" alt="Điện máy Quyết Tiến"></a>
                 <ul class="main-menu menu">
                     <li class="current-menu-item menu-item-has-children"><a href="index.html">Trang chủ</a></li>
-                    <li><a href="contact-us.html">Liên hệ chúng tôi</a></li>
-                    <li class="menu-item-has-children"><a href="blog-list.html">Blog</a></li>
+                    <li><a href="Contact">Liên hệ chúng tôi</a></li>
+                    <li class="menu-item-has-children"><a href="#">Blog</a></li>
                 </ul>
                 <div class="menu-toggle"><span></span></div>
 
@@ -65,9 +65,6 @@
             </div>
         </nav>
     </header>
-
-
-
                     @using (Html.BeginForm("index","slideAds",FormMethod.Post,new { enctype = "multipart/form-data" }))
                     {
                         @Html.AntiForgeryToken()
@@ -142,7 +139,7 @@
         <div class="container">
             <div class="ps-section__content">
                 <h3>Hãy đến cửa hàng của chúng tôi</h3>
-                <p>45 Nguyễn Khắc Nhu, Quận 1, Tp.HCM<br>Hotline: 113</p><a class="ps-btn" href="contact-us.html">View google map</a>
+                <p>45 Nguyễn Khắc Nhu, Quận 1, Tp.HCM<br>Hotline: 113</p><a class="ps-btn" href="Contact">View google map</a>
                 <div class="ps-open-time">
                     <h4>Thời gian hoạt động</h4>
                     <p>Thứ 2 đến Thứ 6: 08:00 AM đến 22:00 PM</p>
@@ -187,7 +184,7 @@
                 <div class="row">
                     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
                         <div class="ps-site-info site-info">
-                            <a class="ps-logo" href="index-2.html"><img src="~/Front-End/images/logo.png" alt=""></a>
+                            <a class="ps-logo" href="index"><img src="~/Front-End/images/logo.png" alt=""></a>
                             <p><strong>Siêu thị Điện máy Quyết Tiến</strong> khai trương siêu thị đầu tiên tại <em>45 Nguyễn Khắc Nhu, Quận 1, Tp.HCM</em>. Cam kết <strong>bán hàng chính hãng</strong>. Hàng hoá tại Siêu thị <strong>Điện máy Quyết Tiến</strong> vô cùng đa dạng, từ các nhóm hàng lớn như Tivi, Tủ Lạnh, Máy Giặt, Máy Lạnh… đến các nhóm hàng Gia dụng như: Nồi Cơm Điện, Bếp Ga, Bếp Điện Từ… Điện máy Quyết Tiến cũng kinh doanh các mặt hàng như: Điện Thoại, Máy Tính Bảng, Laptop, Phụ Kiện…</p>
                             <div class="ps-site-info__contact">
                                 <h4>Thông tin liên hệ</h4>

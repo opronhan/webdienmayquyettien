@@ -20,6 +20,7 @@ namespace DienMayQT.Controllers
             return View(db.ProductTypes.ToList());
         }
 
+
         // GET: ProductTypes/Details/5
         public ActionResult Details(int? id)
         {
@@ -34,7 +35,17 @@ namespace DienMayQT.Controllers
             }
             return View(productType);
         }
+        public ActionResult ProductInfo(int id)
+        {
+            ProductType d = db.ProductTypes.Find(id);
 
+            if (d == null)
+            {
+                return HttpNotFound();
+            }
+
+            return View(d);
+        }
         // GET: ProductTypes/Create
         public ActionResult Create()
         {

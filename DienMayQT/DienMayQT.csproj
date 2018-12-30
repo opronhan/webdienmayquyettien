@@ -490,6 +490,8 @@
     <Content Include="Views\ProductTypes\Details.cshtml" />
     <Content Include="Views\ProductTypes\Edit.cshtml" />
     <Content Include="Views\ProductTypes\Index.cshtml" />
+    <Content Include="Views\ProductTypes\ProductInfo.cshtml" />
+    <Content Include="Views\Home\Tintuc.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

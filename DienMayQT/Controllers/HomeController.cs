@@ -29,5 +29,9 @@ namespace DienMayQT.Controllers
 
             return View();
         }
+        public ActionResult Tintuc()
+        {
+            return View();
+        }
     }
 }

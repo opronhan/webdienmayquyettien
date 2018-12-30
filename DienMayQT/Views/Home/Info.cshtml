@@ -1,9 +1,13 @@
-﻿@model IEnumerable<DienMayQT.Models.Product>
-@{ 
+﻿@model DienMayQT.Models.Product
+
+@{
     Layout = null;
 }
+
 <!DOCTYPE html>
 <html lang="en">
+
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -15,9 +19,7 @@
     <meta name="keywords" content="Điện máy Quyết Tiến">
     <meta name="description" content="Công ty cổ phần TNHH Điện máy Quyết Tiến">
     <title>Demo - Điện máy Quyết Tiến Store</title>
-    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700%7CLibre+Baskerville:400,700"
-          rel="stylesheet">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700%7CLibre+Baskerville:400,700" rel="stylesheet">
     <link rel="stylesheet" href="~/Front-End/plugins/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="~/Front-End/plugins/furniture-icon/style.css">
     <link rel="stylesheet" href="~/Front-End/plugins/bootstrap/dist/css/bootstrap.min.css">
@@ -28,8 +30,7 @@
     <link rel="stylesheet" href="~/Front-End/plugins/jquery-ui/jquery-ui.min.css">
     <link rel="stylesheet" href="~/Front-End/plugins/lightGallery-master/dist/css/lightgallery.min.css">
     <link rel="stylesheet" href="~/Front-End/css/style.css">
-
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    
 </head>
 <body>
     <div class="header--sidebar"></div>
@@ -51,7 +52,7 @@
             <div class="ps-container">
                 <a class="ps-logo" href="index"><img src="~/Front-End/images/logo.png" alt="Điện máy Quyết Tiến"></a>
                 <ul class="main-menu menu">
-                    <li class="current-menu-item menu-item-has-children"><a href="index">Trang chủ</a></li>
+                    <li class="current-menu-item menu-item-has-children"><a href="index.html">Trang chủ</a></li>
                     <li><a href="Contact">Liên hệ chúng tôi</a></li>
                     <li class="menu-item-has-children"><a href="Tintuc">Tin tức</a></li>
                 </ul>
@@ -65,119 +66,58 @@
             </div>
         </nav>
     </header>
-                    @using (Html.BeginForm("index","slideAds",FormMethod.Post,new { enctype = "multipart/form-data" }))
-                    {
-                        @Html.AntiForgeryToken()
-                        @Html.Action("Index", "slideAds")
-                    }
-    <div class="ps-section ps-home-categories">
+    <div class="ps-hero bg--cover" data-background="/Front-End/images/hero/bread-2.jpg">
         <div class="ps-container">
-            <div class="ps-section__header text-center">
-                <p>Chào mừng bạn đến với Cửa hàng Điện máy Quyết Tiến Online</p>
-                <h3 class="ps-section__title">Danh mục sản phẩm</h3><span class="ps-section__line"></span>
+            <h3>Thông tin sản phẩm</h3>
+            <div class="ps-breadcrumb">
+                <ol class="breadcrumb">
+                    <li><a href="index">Trang chủ</a></li>
+                    <li class="active">Chi tiết sản phẩm</li>
+                </ol>
             </div>
-            <div class="ps-section__content ps-col-tiny">
-                <div class="row">
-                    
-                        @Html.Action("Index", "ProductTypes")
-                    
-                </div>
-            </div>
-            <div class="ps-section__footer text-center"><a class="ps-btn" href="#">Xem tất cả danh mục</a></div>
         </div>
     </div>
-    <div class="ps-section ps-home-best-product">
+    <main class="ps-main">
         <div class="ps-container">
-            <div class="ps-section__header text-center">
-                <p>Chọn sản phẩm bạn muốn</p>
-                <h3 class="ps-section__title">Sản phẩm tốt nhất của chúng tôi</h3><span class="ps-section__line"></span>
-            </div>
-            <div class="ps-section__content mt-100">
+            <div class="ps-product--detail">
                 <div class="row">
-                    @foreach(var i in Model) { 
-                    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 ">
-                        <div class="ps-product">
-                            <div class="ps-product__thumbnail">
-                                <div class="ps-badge"><span>New</span></div>
-                                <div class="ps-badge ps-badge--sale"><span>-35%</span></div><a class="ps-product__favorite" href="/Home/Info/@i.ID"><i class="furniture-heart"></i></a><img src="~/Images/@i.Avatar" height="200px" alt=""><a class="ps-product__overlay" href="/Home/Info/@i.ID"></a>
-                                <div class="ps-product__content full">
-                                    <select class="ps-rating">
-                                        <option value="1">1</option>
-                                        <option value="1">2</option>
-                                        <option value="1">3</option>
-                                        <option value="1">4</option>
-                                        <option value="2">5</option>
-                                    </select><a class="ps-product__title" href="/Home/Info/@i.ID">@i.ProductName</a>
-                                    <div class="ps-product__categories"><a href="/Home/Info/@i.ID">@i.ProductType.ProductTypeName</a></div>
-                                    <p class="ps-product__price">
-                                        <del>@String.Format("{0:0,0} VNĐ", i.OriginPrice)</del>@String.Format("{0:0,0} VNĐ", i.SalePrice)
-                                    </p><a class="ps-btn ps-btn--sm" href="#">Thêm vào giỏ hàng</a>
-                                    <p class="ps-product__feature"><i class="furniture-delivery-truck-2"></i>Giao hàng miễn phí trong vòng 24h</p>
-                                </div>
+                    <div class="col-lg-8 col-md-7 col-sm-12 col-xs-12 ">
+                        <div class="ps-product__thumbnail">
+                            <div class="ps-product__image">
+                                <div class="item"><a href="#"><img src="~/Images/@Model.Avatar" width="400px" alt=""></a></div>                               
                             </div>
-                            <div class="ps-product__content">
+   
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-5 col-sm-12 col-xs-12 ">
+                        <div class="ps-product__info">
+                            <div class="ps-product__rating">
                                 <select class="ps-rating">
                                     <option value="1">1</option>
                                     <option value="1">2</option>
                                     <option value="1">3</option>
                                     <option value="1">4</option>
                                     <option value="2">5</option>
-                                </select><a class="ps-product__title" href="/Home/Info/@i.ID">@i.ProductName</a>
-                                <div class="ps-product__categories"><a href="/Home/Info/@i.ID">@i.ProductType.ProductTypeName</a></div>
-                                <p class="ps-product__price">
-                                    <del>@String.Format("{0:0,0} VNĐ", i.OriginPrice)</del>@String.Format("{0:0,0} VNĐ", i.SalePrice)
-                                </p>
+                                </select><a href="#">(Read all 8 reviews)</a>
+                            </div>
+                            <h1>@Model.ProductName</h1>
+                            <p class="ps-product__category"><a href="#"> @Model.ProductType.ProductTypeName</a></p>
+                            <h3 class="ps-product__price"><del><span></span>@String.Format("{0:0,0} VNĐ", Model.OriginPrice)</del> <span></span> @String.Format("{0:0,0} VNĐ", Model.SalePrice)</h3>
+                            <div class="ps-product__shopping">
+                                <a class="ps-btn" href="cart.html">Add To Cart</a>
+                                <div class="ps-product__actions"><a class="mr-10" href="whishlist.html"><i class="furniture-heart"></i></a><a href="compare.html" title="Compare"><i class="furniture-reload"></i></a></div>
+                            </div>
+                            <div class="ps-product__sharing">
+                                <p>Share this:<a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-dribbble"></i></a></p>
                             </div>
                         </div>
                     </div>
-                    }
                 </div>
+                
             </div>
         </div>
-    </div>
-    <div class="ps-home-open-time bg--parallax" data-background="/Front-End/images/background/home-feature.jpg">
-        <div class="container">
-            <div class="ps-section__content">
-                <h3>Hãy đến cửa hàng của chúng tôi</h3>
-                <p>45 Nguyễn Khắc Nhu, Quận 1, Tp.HCM<br>Hotline: 113</p><a class="ps-btn" href="Contact">View google map</a>
-                <div class="ps-open-time">
-                    <h4>Thời gian hoạt động</h4>
-                    <p>Thứ 2 đến Thứ 6: 08:00 AM đến 22:00 PM</p>
-                    <p>Thứ 7 đến Chủ Nhật: 07:00 AM đến 21:00 PM</p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="ps-home-features-2">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 ">
-                    <div class="ps-block--icon">
-                        <i class="furniture-delivery-truck-1"></i>
-                        <h4>Giao hàng miễn phí <span> Cho hóa đơn trị giá trên 5 triệu đồng</span></h4>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 ">
-                    <div class="ps-block--icon">
-                        <i class="furniture-sofa"></i>
-                        <h4>Tất cả nội thất trong nhà</h4>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 ">
-                    <div class="ps-block--icon">
-                        <i class="furniture-credit-card-1"></i>
-                        <h4>Thanh toán an toàn<span> Bảo vệ thông tin cá nhân</span></h4>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 ">
-                    <div class="ps-block--icon">
-                        <i class="furniture-hours"></i>
-                        <h4>Hỗ trợ 24/7 <span> Luôn luôn lắng nghe khách hàng</span></h4>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    </main>
+
     <footer class="ps-footer site-footer">
         <div class="ps-footer__content">
             <div class="ps-container">
@@ -254,11 +194,8 @@
     <script src="~/Front-End/plugins/jquery-ui/jquery-ui.min.js"></script>
     <!-- Custom scripts-->
     <script src="~/Front-End/js/main.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBOAVbTzBLcOkZOXAIBNs-8EDzqXZoOVa0&amp;region=GB"></script>
-
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDsUcTjt43mTheN9ruCsQVgBE-wgN6_AfY&amp;region=GB"></script>
 </body>
+
 
 </html>

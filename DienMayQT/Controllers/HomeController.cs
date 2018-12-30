@@ -15,7 +15,12 @@ namespace DienMayQT.Controllers
             var product = db.Products.OrderByDescending(x => x.ID).ToList();
             return View(product);
         }
-
+        public ActionResult Info(int id)
+        {
+            Product model = db.Products.Find(id);
+            ViewBag.ProductTypeID = new SelectList(db.ProductTypes, "ID", "ProductTypeName", model.ProductTypeID);
+            return View(model);
+        }
         public ActionResult About()
         {
             ViewBag.Message = "Your application description page.";

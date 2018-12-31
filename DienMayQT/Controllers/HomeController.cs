@@ -10,6 +10,7 @@ namespace DienMayQT.Controllers
     public class HomeController : Controller
     {
         DmQT09Entities db = new DmQT09Entities();
+
         public ActionResult Index()
         {
             var product = db.Products.OrderByDescending(x => x.ID).ToList();

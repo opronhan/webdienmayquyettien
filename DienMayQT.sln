@@ -1,11 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.21005.1
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DienMayQT", "DienMayQT\DienMayQT.csproj", "{CBE82FE4-B11C-4C0F-A609-C84A16CA93FA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestDMQT", "UnitTestDMQT\UnitTestDMQT.csproj", "{0E266821-97B0-419E-BBD5-0C35F809DE97}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestProject1", "UnitTestProject1\UnitTestProject1.csproj", "{321D5257-54CE-4A1D-A148-E65A5A5D3D57}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,10 @@ Global
 		{CBE82FE4-B11C-4C0F-A609-C84A16CA93FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CBE82FE4-B11C-4C0F-A609-C84A16CA93FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CBE82FE4-B11C-4C0F-A609-C84A16CA93FA}.Release|Any CPU.Build.0 = Release|Any CPU
-		{0E266821-97B0-419E-BBD5-0C35F809DE97}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0E266821-97B0-419E-BBD5-0C35F809DE97}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0E266821-97B0-419E-BBD5-0C35F809DE97}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0E266821-97B0-419E-BBD5-0C35F809DE97}.Release|Any CPU.Build.0 = Release|Any CPU
+		{321D5257-54CE-4A1D-A148-E65A5A5D3D57}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{321D5257-54CE-4A1D-A148-E65A5A5D3D57}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{321D5257-54CE-4A1D-A148-E65A5A5D3D57}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{321D5257-54CE-4A1D-A148-E65A5A5D3D57}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

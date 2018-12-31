@@ -51,7 +51,8 @@ namespace DienMayQT.Areas.Admin.Controllers
         // GET: Admin/InstallmentBillsAdmin/Create
         public ActionResult Create()
         {
-            ViewBag.CustomerID = new SelectList(db.Customers, "ID", "CustomerCode");
+            ViewBag.CustomerID = new SelectList((from s in db.Customers select new { ID = s.ID, Info = s.CustomerCode +" - "+ s.CustomerName }), "ID", "Info",null);
+
             return View(Session["installBill"]);
         }
 
